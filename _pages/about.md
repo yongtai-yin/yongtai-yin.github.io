@@ -20,9 +20,9 @@ social: true  # includes social icons at the bottom of the page
 
 Hey, thanks for stopping by! 👋
 
-I'm a Master student at Northwestern Polytechnical University.
+Here is Yongtai Yin (Aaron, 殷永泰).
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Currently, I am pursuing the *M.S. degree* in **Information and Communication Engineering** at Northwestern Polytechnical University, Xi'an, China, co-advised by Prof. Ling Wang and Assoc. Prof. Yuexian Wang. Prior to this, I received the *B.S. degree* in **Communication Engineering** from the School of Electronics and Information at Northwestern Polytechnical University. My research interests include signal processing, compressed sensing, time modulated antenna arrays, and wireless communication. **I am looking for PhD to start in 2024 Fall. Contact me if you have any leads!**
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 

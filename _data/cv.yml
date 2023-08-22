@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: 22nd May 1999
     - name: Languages
-      value: English (fluent, IELTS Band score: 7.5), Mandarin (native)
+      value: English (fluent), Mandarin (native)
 
 - title: Education
   type: time_table

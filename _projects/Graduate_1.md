@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Robust Adaptive Beamforming with Array Self-Calibration
-description: 
+description: Undergraduate Graduation Project
 img: assets/img/mutual_coupling.png
 importance: 1
 category: undergraduate

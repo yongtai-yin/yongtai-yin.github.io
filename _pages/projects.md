@@ -5,7 +5,7 @@ permalink: /experience/
 description: 
 nav: true
 nav_order: 3
-display_categories: [undergraduate, postgraduate, example]
+display_categories: [postgraduate, undergraduate, example]
 horizontal: false
 ---
 

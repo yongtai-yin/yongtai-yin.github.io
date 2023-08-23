@@ -3,7 +3,7 @@ layout: page
 title: Robust DOA Estimation with Time Modulated Antenna Arrays
 description: Master's Graduation Project
 img: assets/img/TMAA.png
-importance: 2
+importance: 1
 category: postgraduate
 related_publications: yinBiquaternionbasedDOAEstimation2023, yinDOAEstimationBased2023
 ---

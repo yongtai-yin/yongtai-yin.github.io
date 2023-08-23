@@ -120,16 +120,16 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Signal Processing.
+    - title: Signal Processing
       items: 
-        - DOA estimation.
-        - source localization and tracking.
-        - time modulated antenna arrays.
-        - compressed sensing.
-    - title: Wireless Communication.
+        - DOA estimation
+        - source localization and tracking
+        - time modulated antenna arrays
+        - compressed sensing
+    - title: Wireless Communication
       items:
-        - channel estimation.
-        - near-field communication.
+        - channel estimation
+        - near-field communication
 
 - title: Other Interests
   type: list

@@ -6,92 +6,120 @@
     - name: Date of Birth
       value: 22nd May 1999
     - name: Languages
-      value: English (fluent), Mandarin (native)
+      value: English (fluent, IELTS 7.5), Mandarin (native)
 
 - title: Education
   type: time_table
   contents:
-    - title: Master Student
-      institution: Northwestern Polytechnical University, Xi’an, China
-      year: Aug. 2021 – Apr. 2024 (expected)
+    - title: Master Student in Information and Communication Engineering
+      institution: Northwestern Polytechnical University, Xi'an, China
+      year: 2021.08 - 2024.04
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Northwestern Polytechnical University, Xi’an, China
-      year: 1900
+        - Centesimal grade average: 91.89/100
+        - Rank: 6/54 (in Major), 10/271 (in Department)
+        - Supervisors: Ling Wang and Yuexian Wang
+        - Related Courses: Matrix Theory (99), Mathematical Statistics (94), Signal Processing for Antenna Array (94)
+    - title: B.S. in Communication Engineering
+      institution: Northwestern Polytechnical University, Xi'an, China
+      year: 2017.09 - 2021.07
       description:
-        - Description 1.
-        - Description 2.
+        - GPA: 3.64/4.00
+        - Rank: 6/71 (in Major)
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Master’s Graduation Project
+      institution: Northwestern Polytechnical University
+      year: 2021.09 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Brief Introduction: This ongoing research addresses common issues in current time-modulated antenna array (TMAA) systems for DOA estimation, including colored noise, high computational complexity, and sampling synchronization errors. By developing improved algorithms, we aim to respond to these challenges and enhance estimation accuracy in practical applications.
+        - title: Contributions
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+            - Analyzed Theoretical Framework
+            - Developed Novel Method
+            - Conducted Numerical Simulations
+            - Optimized parameters for peak performance
+            - Led Manuscript Writing
+            - Addressed Reviewers' Feedback
+        - title: Impact and Outcomes
+          contents:
+            - Published research paper
+            - Ongoing patent application in progress
+
+    - title: Lead Researcher
+      institution: Northwestern Polytechnical University
+      year: 2022.12 - Present
       description:
-        - Description 1.
-        - Description 2.
+        - Brief Introduction: Our study aims to advance channel estimation for massive MIMO systems in IoT applications. We propose a parameterized multipath channel estimation method, in the presence of array gain-phase perturbation. Our method demonstrates superior accuracy, promising improved signal transmission efficiency and reliability.
+        - title: Contributions
+          contents:
+            - Analyzed Theoretical Framework
+            - Developed Novel Method
+            - Conducted Numerical Simulations
+            - Led Manuscript Writing
+        - title: Impact and Outcomes
+          contents:
+            - Manuscript submitted and currently under review
+            - Ongoing patent application in progress
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Project Coordinator
+      institution: Northwestern Polytechnical University
+      year: 2022.05 - 2023.07
       description:
+        - Brief Introduction: Introducing an auxiliary vehicle positioning system with time-modulated antenna arrays, our research enhances localization accuracy in occluded scenes. Leveraging multiple auxiliary sources and employing Doppler shifts in received signals, we achieve superior direct vehicle localization accuracy, outperforming existing methods.
+        - title: Contributions
+          contents:
+            - Conducted Numerical Simulations
+            - Optimized parameters for peak performance
+            - Led Manuscript Writing
+            - Addressed Reviewers' Feedback
+        - title: Impact and Outcomes
+          contents:
+            - Published research paper
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Undergraduate Graduation Project
+      institution: Northwestern Polytechnical University
+      year: 2021.01 - 2021.06
+      description:
+        - Brief Introduction: Addressing mutual coupling effects in antenna arrays, we applied interference-plus-noise covariance matrix reconstruction to achieve robust beamforming. This approach accommodates angle-independent and angle-dependent scenarios respectively, ensuring enhanced performance under mutual coupling mismatch.
+        - title: Contributions
+          contents:
+            - Analyzed Theoretical Framework
+            - Conducted Numerical Simulations
+            - Led Manuscript Writing
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2021
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
+        - Outstanding Graduates at Northwestern Polytechnical University
+    - year: 2020
       items: 
-        - Max Planck Medal
+        - The Second Price Scholarship at Northwestern Polytechnical University
+    - year: 2019
+      items: 
+        - The First Price Scholarship at Northwestern Polytechnical University
+    - year: 2018
+      items: 
+        - The Second Price Scholarship at Northwestern Polytechnical University
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Signal Processing.
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - DOA estimation.
+        - source localization and tracking.
+        - time modulated antenna arrays.
+        - compressed sensing.
+    - title: Wireless Communication.
       items:
-        - Description 1.
-        - Description 2.
+        - channel estimation.
+        - near-field communication.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Badmintion, bodyweight exercise, science fiction.

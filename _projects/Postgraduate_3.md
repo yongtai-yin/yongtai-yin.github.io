@@ -2,7 +2,7 @@
 layout: page
 title: Robust Sparse Direct Localization of Smart Vehicles
 description: Project Coordinator
-img: assets/img/direct_localization.png
+img: assets/img/direct_localization.jpg
 importance: 3
 category: postgraduate
 related_publications: wangRobustSparseDirect2023
@@ -15,11 +15,11 @@ Introducing an auxiliary vehicle positioning system with time-modulated antenna 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/direct_localization.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/direct_localization.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Mutual coupling model.
+    auxiliary vehicle positioning system.
 </div>
 
 ### Contributions

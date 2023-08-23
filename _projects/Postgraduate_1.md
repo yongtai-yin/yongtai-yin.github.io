@@ -2,7 +2,7 @@
 layout: page
 title: Robust DOA Estimation with Time Modulated Antenna Arrays
 description: Master's Graduation Project
-img: assets/img/TMAA.png
+img: assets/img/TMAA.jpg
 importance: 1
 category: postgraduate
 related_publications: yinBiquaternionbasedDOAEstimation2023, yinDOAEstimationBased2023
@@ -14,11 +14,11 @@ This ongoing research addresses common issues in current time-modulated antenna 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/TMAA.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/TMAA.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Mutual coupling model.
+    single-channel receiver with TMAA.
 </div>
 
 ### Contributions

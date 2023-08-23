@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: 22nd May 1999
     - name: Languages
-      value: English (fluent, IELTS 7.5), Mandarin (native)
+      value: "English (fluent, IELTS: 7.5), Mandarin (native)"
 
 - title: Education
   type: time_table
@@ -15,25 +15,26 @@
       institution: Northwestern Polytechnical University, Xi'an, China
       year: 2021.08 - 2024.04
       description:
-        - Centesimal grade average: 91.89/100
-        - Rank: 6/54 (in Major), 10/271 (in Department)
-        - Supervisors: Ling Wang and Yuexian Wang
-        - Related Courses: Matrix Theory (99), Mathematical Statistics (94), Signal Processing for Antenna Array (94)
+        - "Centesimal grade average: 91.89/100"
+        - "Rank: 6/54 (in Major), 10/271 (in Department)"
+        - "Supervisors: Ling Wang and Yuexian Wang"
+        - "Related Courses: Matrix Theory (99), Mathematical Statistics (94), Signal Processing for Antenna Array (94)"
     - title: B.S. in Communication Engineering
       institution: Northwestern Polytechnical University, Xi'an, China
       year: 2017.09 - 2021.07
       description:
-        - GPA: 3.64/4.00
-        - Rank: 6/71 (in Major)
+        - "GPA: 3.64/4.00"
+        - "Rank: 6/71 (in Major)"
 
 - title: Research Experience
   type: time_table
   contents:
-    - title: Master’s Graduation Project
+    - title: Robust DOA Estimation with Time Modulated Antenna Arrays
       institution: Northwestern Polytechnical University
       year: 2021.09 - Present
       description:
-        - Brief Introduction: This ongoing research addresses common issues in current time-modulated antenna array (TMAA) systems for DOA estimation, including colored noise, high computational complexity, and sampling synchronization errors. By developing improved algorithms, we aim to respond to these challenges and enhance estimation accuracy in practical applications.
+        - Master's Graduation Project, supervised by Ling Wang and Yuexian Wang
+        - "Brief Introduction: This ongoing research addresses common issues in current time-modulated antenna array (TMAA) systems for DOA estimation, including colored noise, high computational complexity, and sampling synchronization errors. By developing improved algorithms, we aim to respond to these challenges and enhance estimation accuracy in practical applications."
         - title: Contributions
           contents:
             - Analyzed Theoretical Framework
@@ -47,11 +48,12 @@
             - Published research paper
             - Ongoing patent application in progress
 
-    - title: Lead Researcher
+    - title: Advancements in Channel Estimation for Massive MIMO Systems
       institution: Northwestern Polytechnical University
       year: 2022.12 - Present
       description:
-        - Brief Introduction: Our study aims to advance channel estimation for massive MIMO systems in IoT applications. We propose a parameterized multipath channel estimation method, in the presence of array gain-phase perturbation. Our method demonstrates superior accuracy, promising improved signal transmission efficiency and reliability.
+        - Lead Researcher, collaborated with Neeraj Kumar & Joel Rodrigues
+        - "Brief Introduction: Our study aims to advance channel estimation for massive MIMO systems in IoT applications. We propose a parameterized multipath channel estimation method, in the presence of array gain-phase perturbation. Our method demonstrates superior accuracy, promising improved signal transmission efficiency and reliability."
         - title: Contributions
           contents:
             - Analyzed Theoretical Framework
@@ -63,11 +65,12 @@
             - Manuscript submitted and currently under review
             - Ongoing patent application in progress
 
-    - title: Project Coordinator
+    - title: Robust Sparse Direct Localization of Smart Vehicles
       institution: Northwestern Polytechnical University
       year: 2022.05 - 2023.07
       description:
-        - Brief Introduction: Introducing an auxiliary vehicle positioning system with time-modulated antenna arrays, our research enhances localization accuracy in occluded scenes. Leveraging multiple auxiliary sources and employing Doppler shifts in received signals, we achieve superior direct vehicle localization accuracy, outperforming existing methods.
+        - Project Coordinator, collaborated with Mohammad Obaidat & Joel Rodrigues
+        - "Brief Introduction: Introducing an auxiliary vehicle positioning system with time-modulated antenna arrays, our research enhances localization accuracy in occluded scenes. Leveraging multiple auxiliary sources and employing Doppler shifts in received signals, we achieve superior direct vehicle localization accuracy, outperforming existing methods."
         - title: Contributions
           contents:
             - Conducted Numerical Simulations
@@ -78,10 +81,11 @@
           contents:
             - Published research paper
 
-    - title: Undergraduate Graduation Project
+    - title: Robust Adaptive Beamforming with Array Self-Calibration
       institution: Northwestern Polytechnical University
       year: 2021.01 - 2021.06
       description:
+        - Undergraduate Graduation Project, supervised by Yuexian Wang
         - Brief Introduction: Addressing mutual coupling effects in antenna arrays, we applied interference-plus-noise covariance matrix reconstruction to achieve robust beamforming. This approach accommodates angle-independent and angle-dependent scenarios respectively, ensuring enhanced performance under mutual coupling mismatch.
         - title: Contributions
           contents:
@@ -104,6 +108,14 @@
     - year: 2018
       items: 
         - The Second Price Scholarship at Northwestern Polytechnical University
+
+- title: Skills
+  type: map
+  contents:
+    - name: Programming
+      value: Matlab = LaTeX > C > Python
+    - name: Software
+      value: Adobe Illustrator & Premiere, Microsoft Office, Mathematica, Zotero
 
 - title: Academic Interests
   type: nested_list

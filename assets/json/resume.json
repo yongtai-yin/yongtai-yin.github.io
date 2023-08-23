@@ -5,7 +5,7 @@
     "image": "",
     "email": "yyt1999@mail.nwpu.edu.cn",
     "phone": "(+86) 138-159-75187",
-    "url": "https://yongtai-yin.github.io",
+    "home page": "https://yongtai-yin.github.io",
     "summary": "",
     "location": {
       "address": "",
@@ -22,17 +22,7 @@
       }
     ]
   },
-  "work": [
-    {
-      "name": "",
-      "position": "",
-      "url": "",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
-      "highlights": []
-    }
-  ],
+  "work": [],
   "volunteer": [],
   "education": [
     {
@@ -40,12 +30,10 @@
       "url": "https://en.nwpu.edu.cn/",
       "area": "Information and Communication Engineering",
       "studyType": "Master",
-      "startDate": "Aug. 2021",
-      "endDate": "Apr. 2024 (expected)",
+      "startDate": "2021-08",
+      "endDate": "2024-04 (expected)",
       "score": "91.89/100",
-      "courses": [
-        "Theory of Relativity"
-      ]
+      "courses": []
     }
   ],
   "awards": [],
@@ -54,12 +42,12 @@
   "skills": [],
   "languages": [
     {
-      "language": "German",
+      "language": "Mandarin",
       "fluency": "Native speaker"
     },
     {
       "language": "English",
-      "fluency": "Fluent"
+      "fluency": "Fluent (IELTS: 7.5)"
     }
   ],
   "interests": [],

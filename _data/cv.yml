@@ -86,7 +86,7 @@
       year: 2021.01 - 2021.06
       description:
         - Undergraduate Graduation Project, supervised by Yuexian Wang
-        - Brief Introduction: Addressing mutual coupling effects in antenna arrays, we applied interference-plus-noise covariance matrix reconstruction to achieve robust beamforming. This approach accommodates angle-independent and angle-dependent scenarios respectively, ensuring enhanced performance under mutual coupling mismatch.
+        - "Brief Introduction: Addressing mutual coupling effects in antenna arrays, we applied interference-plus-noise covariance matrix reconstruction to achieve robust beamforming. This approach accommodates angle-independent and angle-dependent scenarios respectively, ensuring enhanced performance under mutual coupling mismatch."
         - title: Contributions
           contents:
             - Analyzed Theoretical Framework
@@ -98,16 +98,16 @@
   contents:
     - year: 2021
       items: 
-        - Outstanding Graduates at Northwestern Polytechnical University
+        - Outstanding Graduates, Northwestern Polytechnical University
     - year: 2020
       items: 
-        - The Second Price Scholarship at Northwestern Polytechnical University
+        - The Second Price Scholarship, Northwestern Polytechnical University
     - year: 2019
       items: 
-        - The First Price Scholarship at Northwestern Polytechnical University
+        - The First Price Scholarship, Northwestern Polytechnical University
     - year: 2018
       items: 
-        - The Second Price Scholarship at Northwestern Polytechnical University
+        - The Second Price Scholarship, Northwestern Polytechnical University
 
 - title: Skills
   type: map

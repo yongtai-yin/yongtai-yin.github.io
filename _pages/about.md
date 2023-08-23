@@ -22,7 +22,7 @@ Hey, thanks for stopping by! 👋
 
 Here is Yongtai Yin (Aaron, 殷永泰).
 
-Currently, I am pursuing the *M.S. degree* in **Information and Communication Engineering** at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/), Xi'an, China, co-advised by Prof. Ling Wang and Assoc. Prof. Yuexian Wang. Prior to this, I received the *B.S. degree* in **Communication Engineering** from the School of Electronics and Information at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/).
+Currently, I am pursuing the *M.S. degree* in **Information and Communication Engineering** at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/), Xi'an, China, co-advised by Prof. Ling Wang and Assoc. Prof. [Yuexian Wang](https://orcid.org/0000-0002-3622-6162). Prior to this, I received the *B.S. degree* in **Communication Engineering** from the School of Electronics and Information at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/).
 
 My research interests include signal processing, compressed sensing, time modulated antenna arrays, and wireless communication.
 

@@ -22,8 +22,8 @@ Hey, thanks for stopping by! 👋
 
 Here is Yongtai Yin (Aaron, 殷永泰).
 
-Currently, I am pursuing the *M.S. degree* in **Information and Communication Engineering** at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/), Xi'an, China, co-advised by Prof. Ling Wang and Assoc. Prof. [Yuexian Wang](https://orcid.org/0000-0002-3622-6162). Prior to this, I received the *B.S. degree* in **Communication Engineering** from the School of Electronics and Information at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/).
+I'm a *Master's student* at Northwestern Polytechnical University, specializing in `Information and Communication Engineering`, co-advised by Prof. [Ling Wang](https://ieeexplore.ieee.org/author/37578965000) and Assoc. Prof. [Yuexian Wang](https://orcid.org/0000-0002-3622-6162).. My passion lies in `Signal Processing`, `Wireless Communication`, `Compressed Sensing`, and `Time Modulated Antenna Arrays`. Prior to this, I earned my *Bachelor's degree* in `Communication Engineering` from the same institution.
 
-My research interests include signal processing, compressed sensing, time modulated antenna arrays, and wireless communication.
+`I'm excited to share that I have set my sights on pursuing a PhD in the fall of 2024.` I'm committed to diving deeper into research and innovation in the fields I'm passionate about. My journey has been marked by impactful research experiences and publications, which have fueled my desire to contribute more to the advancement of knowledge in these areas.
 
-**I am looking for PhD to start in 2024 Fall. Contact me if you have any leads!**
+If you're interested in connecting, discussing research, or learning more about my journey, feel free to reach out. I'm grateful for the guidance of my supervisors, Dr. Ling Wang and Dr. Yuexian Wang, esteemed professors at Northwestern Polytechnical University.

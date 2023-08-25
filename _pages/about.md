@@ -26,4 +26,6 @@ I'm a *Master's student* at Northwestern Polytechnical University, specializing 
 
 **I'm excited to share that I have set my sights on pursuing a PhD in the fall of 2024.** I'm committed to diving deeper into research and innovation in the fields I'm passionate about. My journey has been marked by impactful research experiences and publications, which have fueled my desire to contribute more to the advancement of knowledge in these areas.
 
-**If you're interested in connecting, discussing research, or learning more about my journey, feel free to reach out.** I'm grateful for the guidance of my supervisors, Dr. Ling Wang and Dr. Yuexian Wang, esteemed professors at Northwestern Polytechnical University.
+**If you're interested in connecting, discussing research, or learning more about my journey, feel free to reach out.**
+
+> I'm grateful for the guidance of my supervisors, Dr. Ling Wang and Dr. Yuexian Wang, esteemed professors at Northwestern Polytechnical University.

@@ -5,7 +5,7 @@ description: Master's Graduation Project
 img: assets/img/TMAA.jpg
 importance: 1
 category: postgraduate
-related_publications: yinBiquaternionbasedDOAEstimation2023, yinDOAEstimationBased2023
+related_publications: yinBiquaternionbasedDOAEstimation2023, yinDOAEstimationBased2024
 ---
 
 ### Brief Introduction

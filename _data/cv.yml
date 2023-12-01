@@ -23,7 +23,7 @@
       institution: Northwestern Polytechnical University, Xi'an, China
       year: 2017.09 - 2021.07
       description:
-        - "GPA: 3.64/4.00"
+        - "GPA: 3.639/4.000"
         - "Rank: 6/71 (in Major)"
 
 - title: Research Experience
@@ -96,6 +96,11 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2023
+      items:
+        - Outstanding Graduate Students, Northwestern Polytechnical University
+        - The First-Class Academic Scholarship, Northwestern Polytechnical University
+        - The Second Prize Scholarship, Northwestern Polytechnical University
     - year: 2022
       items:
         - Outstanding Graduate Students, Northwestern Polytechnical University
@@ -104,13 +109,13 @@
         - Outstanding Graduates, Northwestern Polytechnical University
     - year: 2020
       items: 
-        - The Second Price Scholarship, Northwestern Polytechnical University
+        - The Second Prize Scholarship, Northwestern Polytechnical University
     - year: 2019
       items: 
-        - The First Price Scholarship, Northwestern Polytechnical University
+        - The First Prize Scholarship, Northwestern Polytechnical University
     - year: 2018
       items: 
-        - The Second Price Scholarship, Northwestern Polytechnical University
+        - The Second Prize Scholarship, Northwestern Polytechnical University
 
 - title: Skills
   type: map

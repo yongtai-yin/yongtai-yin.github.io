@@ -6,7 +6,7 @@ subtitle: <a href='https://en.nwpu.edu.cn/'>Northwestern Polytechnical Universit
 
 profile:
   align: right
-  image: Yongtai_Yin.jpg
+  image: Yongtai_Yin.png
   image_circular: false # crops the image to make it circular
   # address: >
   #  <p>127 West Youyi Road, Beilin District</p>

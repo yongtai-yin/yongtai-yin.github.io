@@ -19,5 +19,3 @@ I am a research assistant at CUHK.
 - **[Nov. 2022]** Our paper titled "Biquaternion-based DOA estimation of noncircular signals with time-modulated antenna arrays" is accepted by *AEU-Int. J. Electron. Commun.*.
 
 {% include_relative _includes/publications.md %}
-
-{% include_relative _includes/services.md %}

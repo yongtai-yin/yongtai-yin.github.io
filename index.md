@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a research assistant at CUHK.
+I am currently a research assistant in the Department of Electronic Engineering at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk), supervisored by [Prof. Wing-Kin Ma](https://www.ee.cuhk.edu.hk/~wkma/). I received my Master's Degree in Information and Communication Engineering at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/), advised by Prof. Ling Wang and Prof. Yuexian Wang. Prior to this, I obtained my Bachelor’s Degree in Communication Engineering from [Northwestern Polytechnical University](https://en.nwpu.edu.cn/).
 
 ## Research Interests
 

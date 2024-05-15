@@ -4,19 +4,19 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am a research assistant at CUHK.
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Signal Processing:** DOA estimation, source localization and tracking
+- **Wireless Communication:** massive MIMO, Channel estimation, near-field communication
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Mar. 2024]** Our paper titled "Joint Multipath Channel Estimation and Array Channel Inconsistency Calibration for Massive MIMO Systems" is accepted by *IEEE Internet Things J.*.
+- **[Aug. 2023]** Our paper titled "DOA estimation based on smoothed sparse reconstruction with time-modulated linear arrays" is accepted by *Signal Process.*.
+- **[Jun. 2023]** Our paper titled "Robust Sparse Direct Localization of Smart Vehicle with Partly Calibrated Time Modulated Arrays" is accepted by *IEEE Trans. Intell. Transp. Syst.*.
+- **[Nov. 2022]** Our paper titled "Biquaternion-based DOA estimation of noncircular signals with time-modulated antenna arrays" is accepted by *AEU-Int. J. Electron. Commun.*.
 
 {% include_relative _includes/publications.md %}
 

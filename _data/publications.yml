@@ -1,6 +1,6 @@
 main:
 
-  - title: "Joint Multipath Channel Estimation and Array Channel Inconsistency Calibration for Massive MIMO Systems"
+  - title: Joint Multipath Channel Estimation and Array Channel Inconsistency Calibration for Massive MIMO Systems
     authors: <strong>Yongtai Yin</strong>, Yuexian Wang*, Yanyun Gong, Neeraj Kumar, Ling Wang, and Joel J. P. C. Rodrigues (*Corresponding authors)
     conference_short: IOTJ
     conference: IEEE Internet of Things Journal, 2024.
@@ -10,33 +10,33 @@ main:
     image: ./assets/img/IOTJ2024.jpg
     notes: Early Accept
 
-  - title: "DOA Estimation Based on Smoothed Sparse Reconstruction with Time-Modulated Linear Arrays"
+  - title: DOA Estimation Based on Smoothed Sparse Reconstruction with Time-Modulated Linear Arrays
     authors: <strong>Yongtai Yin</strong>, Yuexian Wang*, Tiantian Dai, and Ling Wang
     conference_short: SP
-    conference: Signal Processing, 2024.
-    # pdf: https://arxiv.org/pdf/2002.10211.pdf
+    conference: Signal Processing, Volume 32, 109229, 2024.
+    pdf: https://doi.org/10.1016/j.sigpro.2023.109229
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
     image: ./assets/img/SP2024.png
 
-  - title: "Robust Sparse Direct Localization of Smart Vehicle with Partly Calibrated Time Modulated Arrays"
+  - title: Robust Sparse Direct Localization of Smart Vehicle with Partly Calibrated Time Modulated Arrays
     authors: Yuexian Wang*, Mohammad S. Obaidat, <strong>Yongtai Yin</strong>, Ling Wang, Joel J. P. C. Rodrigues, and Balqies Sadoun
     conference_short: TITS
-    conference: IEEE Transactions on Intelligent Transportation Systems, 2023.
-    # pdf: https://arxiv.org/pdf/2002.10211.pdf
+    conference: IEEE Transactions on Intelligent Transportation Systems, Volume 24, Issue 11, 2023.
+    pdf: https://doi.org/10.1109/TITS.2023.3297248
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
     image: ./assets/img/TITS2023.png
 
-  - title: "Biquaternion-Based DOA Estimation of Noncircular Signals with Time-Modulated Antenna Arrays"
+  - title: Biquaternion-Based DOA Estimation of Noncircular Signals with Time-Modulated Antenna Arrays
     authors: <strong>Yongtai Yin</strong>, Yuexian Wang*, Yanyun Gong, Zhaolin Zhang, and Ling Wang
     conference_short: AEU
-    conference: AEU - International Journal of Electronics and Communications, 2023.
-    # pdf: https://arxiv.org/pdf/2002.10211.pdf
+    conference: AEU - International Journal of Electronics and Communications, Volume 159, 154466, 2023.
+    pdf: https://doi.org/10.1016/j.aeue.2022.154466
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/

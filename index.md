@@ -13,9 +13,9 @@ I am currently a research assistant in the Department of Electronic Engineering 
 
 ## News
 
-- **[Mar. 2024]** Our paper titled "Joint Multipath Channel Estimation and Array Channel Inconsistency Calibration for Massive MIMO Systems" is accepted by *IEEE Internet Things J.*.
-- **[Aug. 2023]** Our paper titled "DOA estimation based on smoothed sparse reconstruction with time-modulated linear arrays" is accepted by *Signal Process.*.
-- **[Jun. 2023]** Our paper titled "Robust Sparse Direct Localization of Smart Vehicle with Partly Calibrated Time Modulated Arrays" is accepted by *IEEE Trans. Intell. Transp. Syst.*.
-- **[Nov. 2022]** Our paper titled "Biquaternion-based DOA estimation of noncircular signals with time-modulated antenna arrays" is accepted by *AEU-Int. J. Electron. Commun.*.
+- **[Mar. 2024]** Our paper about channel estimation is accepted to *IEEE Internet Things J.*.
+- **[Aug. 2023]** Our paper about <a href="https://doi.org/10.1016/j.sigpro.2023.109229">DOA estimation</a> is accepted to *Signal Process.*.
+- **[Jun. 2023]** Our paper about <a href="https://doi.org/10.1109/TITS.2023.3297248">source localization</a> is accepted to *IEEE Trans. Intell. Transp. Syst.*.
+- **[Nov. 2022]** Our paper about <a href="https://doi.org/10.1016/j.aeue.2022.154466">DOA estimation</a> is accepted to *AEU-Int. J. Electron. Commun.*.
 
 {% include_relative _includes/publications.md %}

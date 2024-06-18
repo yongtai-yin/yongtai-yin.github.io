@@ -8,7 +8,7 @@ main:
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/IOTJ2024.jpg
-    notes: Early Accept
+    notes: Early Access
 
   - title: DOA Estimation Based on Smoothed Sparse Reconstruction with Time-Modulated Linear Arrays
     authors: <strong>Yongtai Yin</strong>, Yuexian Wang*, Tiantian Dai, and Ling Wang

@@ -1,10 +1,10 @@
 main:
 
   - title: Joint Multipath Channel Estimation and Array Channel Inconsistency Calibration for Massive MIMO Systems
-    authors: <strong>Yongtai Yin</strong>, Yuexian Wang*, Yanyun Gong, Neeraj Kumar, Ling Wang, and Joel J. P. C. Rodrigues (*Corresponding authors)
+    authors: <strong>Yongtai Yin</strong>, Yuexian Wang*, Neeraj Kumar, Ling Wang, and Joel J. P. C. Rodrigues (*Corresponding authors)
     conference_short: IOTJ
     conference: IEEE Internet of Things Journal, 2024.
-    # pdf: https://arxiv.org/pdf/2306.00988.pdf
+    pdf: https://doi.org/10.1109/jiot.2024.3377437
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/IOTJ2024.jpg

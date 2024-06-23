@@ -99,6 +99,18 @@
 
       <br>
 
+      {% if site.enable_last_update %}
+      <small>Last Update:
+            <script>
+              const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+              ];
+              var modiDate = new Date(document.lastModified);
+              var showAs = modiDate.getDate() + ". " + monthNames[modiDate.getMonth()] + " " + modiDate.getFullYear();
+              document.write(showAs);
+            </script>
+      </small> 
+      {% endif %}
+
       {% if site.enable_footnote %}
       <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
       {% endif %}

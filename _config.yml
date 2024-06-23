@@ -10,6 +10,9 @@ keywords: Yongtai Yin, yongtai, ytyin, yin yongtai
 description: Yongtai Yin's Homepage.
 canonical: https://yongtai-yin.github.io/
 
+# The option is used to show the last update time.
+enable_last_update: true
+
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 google_scholar: https://scholar.google.com/citations?user=hNvpv2kAAAAJ&hl

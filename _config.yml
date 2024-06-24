@@ -39,10 +39,6 @@ auto_dark_mode: true
 # You can use this option to choose between Serif or Sans Serif fonts.
 font: "Serif" # or "Sans Serif"
 
-# Google Analytics ID
-# Please remove this if you don't use Google Analytics
-google_analytics: G-RRBE08EXJS
-
 # Analytics
 # Please remove the following lines about analytics services if you fork my project. 
 # Otherwise, the analytics information of your website will be recorded to my ClustrMaps accounts.

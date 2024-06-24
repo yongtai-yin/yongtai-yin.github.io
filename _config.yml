@@ -44,10 +44,6 @@ font: "Serif" # or "Sans Serif"
 # Otherwise, the analytics information of your website will be recorded to my ClustrMaps accounts.
 clustrmaps_id: R5uEk2mKpcemxfezaBks5C2S87s5YN2gzMVmMHHKpTU
 
-# Use this project as a remote theme for GitHub Pages
-# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
-remote_theme: yaoyao-liu/minimal-light
-
 # The following files will be removed from the generated website.
 exclude:
   - Gemfile

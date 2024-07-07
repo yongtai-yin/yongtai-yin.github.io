@@ -6,7 +6,7 @@ layout: homepage
 
 I am currently employed as a research assistant in the Department of Electronic Engineering at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk) (CUHK), under the supervision of [Prof. Wing-Kin Ma](https://www.ee.cuhk.edu.hk/~wkma/). Prior to this, I obtained my Bachelor of Engineering (B.Eng.) degree in Communication Engineering and Master of Engineering (M.Eng.) degree in Information and Communication Engineering from [Northwestern Polytechnical University](https://en.nwpu.edu.cn/) (NWPU), Xi'an, China, in 2021 and 2024, respectively.
 
-In August of this year, I will commence my studies at CUHK's [DSP Lab](dsp.ee.cuhk.edu.hk) as a Ph.D. student, and I am eagerly anticipating this opportunity.
+In August of this year, I will commence my studies at CUHK's [DSP Lab](http://dsp.ee.cuhk.edu.hk) as a Ph.D. student, and I am eagerly anticipating this opportunity.
 
 ## Research Interests
 

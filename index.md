@@ -8,8 +8,9 @@ I am currently a Ph.D. student at the [DSP Lab](http://dsp.ee.cuhk.edu.hk) in th
 
 ## Research Interests
 
-- **Signal Processing:** DOA estimation, source localization and tracking
-- **Wireless Communication:** massive MIMO, Channel estimation, near-field communication
+- **Optimization**
+- **Signal Processing**
+- **Wireless Communications**
 
 ## News
 

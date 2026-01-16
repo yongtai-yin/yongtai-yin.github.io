@@ -119,7 +119,7 @@ body {
 .social-links {
     display: flex;
     gap: 20px;
-    font-size: 1.8em;
+    font-size: 2.2em; /* Increase icon size */
     margin-top: 15px;
 }
 
@@ -262,6 +262,9 @@ footer {
     /* Center Social Icons on Mobile */
     .social-links {
         justify-content: center;
+        gap: 25px; /* Increase gap slightly for touch targets */
+        margin-top: 20px;
+        font-size: 2.4em; /* Make even larger on mobile for better touch targets */
     }
 
     /* 4. Adjust Navbar Spacing */

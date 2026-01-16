@@ -116,6 +116,13 @@ body {
     line-height: 1.8;
 }
 
+.social-links {
+    display: flex;
+    gap: 20px;
+    font-size: 1.8em;
+    margin-top: 15px;
+}
+
 .profile-contact a {
     color: var(--link-color);
     text-decoration: none;
@@ -250,6 +257,11 @@ footer {
     .avatar {
         width: 150px;
         height: 150px;
+    }
+
+    /* Center Social Icons on Mobile */
+    .social-links {
+        justify-content: center;
     }
 
     /* 4. Adjust Navbar Spacing */

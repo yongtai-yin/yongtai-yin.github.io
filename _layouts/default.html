@@ -36,7 +36,7 @@
                     <div class="profile-bio">{{ page.bio_school }}</div>
                     <div class="profile-contact">
                         <p>{{ page.email }}</p>
-                        <div style="display: flex; justify-content: space-between; font-size: 2em; margin-top: 10px; width: 100%;">
+                        <div style="display: flex; gap: 20px; font-size: 1.8em; margin-top: 15px;">
                             {% for social in page.socials %}
                             <a href="{{ social.url }}" title="{{ social.name }}">
                                 {% if social.icon %}

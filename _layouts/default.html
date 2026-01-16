@@ -38,7 +38,7 @@
                         <p>{{ page.email }}</p>
                         <div class="social-links">
                             {% for social in page.socials %}
-                            <a href="{{ social.url }}" title="{{ social.name }}">
+                            <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" title="{{ social.name }}">
                                 {% if social.icon %}
                                     <i class="{{ social.icon }}"></i>
                                 {% else %}
@@ -70,6 +70,18 @@
             &copy; {{ "now" | date: "%Y" }} {{ site.title }}.
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].hostname !== window.location.hostname || links[i].href.endsWith('.pdf')) {
+                    links[i].target = '_blank';
+                    links[i].rel = 'noopener noreferrer';
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>

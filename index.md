@@ -15,7 +15,7 @@ socials:
     url: "https://github.com/yongtai-yin"
     icon: fab fa-github
   - name: Linkedin
-    url: "#"
+    url: "www.linkedin.com/in/yongtai-yin"
     icon: fab fa-linkedin
 ---
 

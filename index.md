@@ -1,47 +1,67 @@
 ---
 layout: default
-title: San Zhang's Homepage
+layout_type: home
+title: San Zhang - Home
 name: San Zhang
-avatar: avatar.jpg
+avatar: /assets/img/avatar.jpg
+bio_role: Ph.D. Student
+bio_school: University of XXX
+email: san.zhang [at] university.edu
+socials:
+  - name: Google Scholar
+    url: "#"
+  - name: GitHub
+    url: "#"
+  - name: Twitter
+    url: "#"
 ---
-Ph.D. Student
-School of Computer Science, University of XXX
-Email: san.zhang [at] university.edu
-[Google Scholar](#) / [GitHub](#) / [Twitter](#)
-
-<!--more-->
 
 ## About Me
 
-I am a first-year Ph.D. student at the University of XXX, advised by Prof. YYY. My research interests include Computer Vision and Machine Learning.
+I am a first-year Ph.D. student at the University of XXX, advised by Prof. YYY. My research interests include **Computer Vision**, **Machine Learning**, and **AI for Sustainability**.
+
+Previously, I obtained my Bachelor's degree from ZZZ University.
 
 ## News
 
-*   **[2026.01]** One paper accepted to CVPR 2026!
-*   **[2025.12]** Received the Best Student Paper Award.
+<table class="news-table">
+    <tr>
+        <td class="news-date">Jan 2026</td>
+        <td class="news-text">One paper accepted to <strong>CVPR 2026</strong>!</td>
+    </tr>
+    <tr>
+        <td class="news-date">Dec 2025</td>
+        <td class="news-text">Received the Best Student Paper Award at the AI Workshop.</td>
+    </tr>
+    <tr>
+        <td class="news-date">Sep 2025</td>
+        <td class="news-text">Joined University of XXX as a Ph.D. student.</td>
+    </tr>
+</table>
 
-## Publications
+## Selected Publications
 
-<!-- Note: Keep the HTML tags below for better styling -->
 <div class="pub-list">
 
-1. <span class="pub-title">Deep Learning for Something Amazing</span>
-   **San Zhang**, Li Si, Wang Wu
-   <div class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2026</div>
-   <div class="pub-links">
-     [PDF](#) [Code](#) [BibTeX](#)
-   </div>
-
-2. <span class="pub-title">Another Great Paper Title</span>
-   Li Si, **San Zhang**, Wang Wu
-   <div class="pub-venue">International Conference on Machine Learning (ICML), 2025</div>
-   <div class="pub-links">
-     [PDF](#) [Project](#)
-   </div>
-
+<div class="pub-item">
+    <span class="pub-title">Deep Learning for Something Amazing</span>
+    <div class="pub-authors"><strong>San Zhang</strong>, Li Si, Wang Wu</div>
+    <div class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2026</div>
+    <div class="pub-links">
+        <a href="#">PDF</a>
+        <a href="#">Code</a>
+        <a href="#">BibTeX</a>
+    </div>
 </div>
 
-## Teaching
+<div class="pub-item">
+    <span class="pub-title">Another Great Paper Title</span>
+    <div class="pub-authors">Li Si, <strong>San Zhang</strong>, Wang Wu</div>
+    <div class="pub-venue">International Conference on Machine Learning (ICML), 2025</div>
+    <div class="pub-links">
+        <a href="#">PDF</a>
+        <a href="#">Project</a>
+    </div>
+</div>
 
-*   Teaching Assistant, CS101: Intro to Programming, Fall 2025
-*   Teaching Assistant, CS102: Data Structures, Spring 2025
+</div>

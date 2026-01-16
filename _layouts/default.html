@@ -23,11 +23,12 @@
     <!-- Main Container -->
     <div class="container">
         {% if page.layout_type == 'home' %}
-            <!-- Two-Column Layout for Homepage -->
+            <!-- Two-Column Layout (Sidebar + Content) -->
             <div class="profile-layout">
                 <!-- Left Sidebar -->
                 <aside class="profile-sidebar">
                     <img src="{{ page.avatar | relative_url }}" alt="{{ page.name }}" class="avatar">
+                    <!-- FIX: Use page.name specifically -->
                     <div class="profile-name">{{ page.name }}</div>
                     <div class="profile-bio">{{ page.bio_role }}</div>
                     <div class="profile-bio">{{ page.bio_school }}</div>
@@ -47,7 +48,7 @@
                 </main>
             </div>
         {% else %}
-            <!-- Single Column for other pages -->
+            <!-- Single Column for CV, Publications, etc. -->
             <main class="main-content">
                 <h1>{{ page.title }}</h1>
                 {{ content }}
@@ -58,7 +59,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            &copy; {{ "now" | date: "%Y" }} {{ site.title }}. Powered by GitHub Pages.
+            &copy; {{ "now" | date: "%Y" }} {{ site.title }}.
         </div>
     </footer>
 

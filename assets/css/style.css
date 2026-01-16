@@ -16,7 +16,6 @@ body {
     line-height: 1.6;
 }
 
-/* Container */
 .container {
     max-width: 960px;
     margin: 0 auto;
@@ -64,23 +63,30 @@ body {
     color: var(--link-color);
 }
 
-/* Main Layout: Sidebar + Content */
+/* --- Layout for Homepage (Sidebar + Content) --- */
 .profile-layout {
-    display: grid;
-    grid-template-columns: 280px 1fr;
+    display: flex; /* Changed from grid to flex for better sticky handling */
     gap: 50px;
     margin-bottom: 60px;
+    align-items: flex-start; /* Crucial for sticky to work */
 }
 
-/* Sidebar (Profile) */
+/* Sidebar Styling */
 .profile-sidebar {
+    width: 280px;
+    flex-shrink: 0;
     text-align: left;
+    
+    /* Sticky Magic Here */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px; /* Distance from top of viewport (navbar height + buffer) */
 }
 
 .avatar {
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* Circular */
+    border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -95,10 +101,11 @@ body {
 .profile-bio {
     font-size: 0.95em;
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .profile-contact {
+    margin-top: 15px;
     font-size: 0.9em;
     color: #666;
 }
@@ -109,6 +116,11 @@ body {
 }
 
 /* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    min-width: 0; /* Prevents flex items from overflowing */
+}
+
 .main-content h2 {
     font-size: 1.5em;
     border-bottom: 1px solid var(--border-color);
@@ -122,14 +134,10 @@ body {
     margin-top: 0;
 }
 
-/* News Section Styling */
+/* News Section */
 .news-table {
     width: 100%;
     border-collapse: collapse;
-}
-
-.news-table tr {
-    border-bottom: none;
 }
 
 .news-date {
@@ -139,15 +147,16 @@ body {
     color: #444;
     padding-bottom: 15px;
     font-size: 0.9em;
+    white-space: nowrap;
+    padding-right: 15px;
 }
 
 .news-text {
-    width: 85%;
     padding-bottom: 15px;
 }
 
-/* Publication List */
-.pub-list .pub-item {
+/* Publications */
+.pub-item {
     margin-bottom: 25px;
 }
 
@@ -183,6 +192,13 @@ body {
     color: #fff;
 }
 
+/* PDF Embed Container */
+.pdf-container {
+    width: 100%;
+    height: 800px;
+    border: 1px solid var(--border-color);
+}
+
 /* Footer */
 footer {
     border-top: 1px solid var(--border-color);
@@ -190,25 +206,24 @@ footer {
     text-align: center;
     color: var(--gray-color);
     font-size: 0.85em;
+    margin-top: 50px;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .profile-layout {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        flex-direction: column;
     }
     
     .profile-sidebar {
+        width: 100%;
         text-align: center;
+        position: relative; /* Disable sticky on mobile */
+        top: 0;
     }
     
     .avatar {
         width: 160px;
         height: 160px;
-    }
-
-    .news-date {
-        width: 25%;
     }
 }

@@ -1,0 +1,20 @@
+- title: "Deep Learning for Something Amazing"
+  authors: "<strong>Yongtai Yin</strong>, Li Si, Wang Wu"
+  venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2026"
+  pdf: "#"
+  code: "#"
+  bibtex: "#"
+  selected: true # Used to filter for the homepage
+
+- title: "Another Great Paper Title"
+  authors: "Li Si, <strong>Yongtai Yin</strong>, Wang Wu"
+  venue: "International Conference on Machine Learning (ICML), 2025"
+  pdf: "#"
+  project: "#"
+  selected: true
+
+- title: "An Older Paper"
+  authors: "<strong>Yongtai Yin</strong>, Zhang San"
+  venue: "ECCV, 2024"
+  pdf: "#"
+  selected: false

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        {% if page.avatar %}
+        <img src="{{ page.avatar }}" alt="Avatar" class="avatar">
+        {% endif %}
+        <div class="header-content">
+            <h1>{{ page.name }}</h1>
+            <div class="bio-text">
+                {{ content | split: "<!--more-->" | first }}
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {{ content | split: "<!--more-->" | last }}
+    </main>
+
+    <footer style="margin-top:50px; text-align:center; font-size:0.8em; color:#999;">
+        &copy; {{ "now" | date: "%Y" }} {{ page.name }}. Powered by GitHub Pages.
+    </footer>
+</body>
+</html>

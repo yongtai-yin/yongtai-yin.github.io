@@ -1,7 +1,7 @@
 ---
 layout: default
 layout_type: home
-title: Yongtai Yin - Home
+title: Yongtai Yin
 name: Yongtai Yin
 avatar: /assets/img/avatar.jpg
 bio_role: Ph.D. Student

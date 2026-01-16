@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 </head>
 <body>
 
@@ -34,9 +36,15 @@
                     <div class="profile-bio">{{ page.bio_school }}</div>
                     <div class="profile-contact">
                         <p>{{ page.email }}</p>
-                        <p>
+                        <p style="font-size: 1.25em;">
                             {% for social in page.socials %}
-                            <a href="{{ social.url }}">{{ social.name }}</a>{% unless forloop.last %} / {% endunless %}
+                            <a href="{{ social.url }}" title="{{ social.name }}" style="margin-right: 5px;">
+                                {% if social.icon %}
+                                    <i class="{{ social.icon }}"></i>
+                                {% else %}
+                                    {{ social.name }}
+                                {% endif %}
+                            </a>
                             {% endfor %}
                         </p>
                     </div>

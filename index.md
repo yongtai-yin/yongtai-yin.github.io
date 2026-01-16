@@ -5,15 +5,18 @@ title: Yongtai Yin
 name: Yongtai Yin
 avatar: /assets/img/avatar.jpg
 bio_role: Ph.D. Student
-bio_school: University of XXX
-email: san.zhang [at] university.edu
+bio_school: The Chinese University of Hong Kong
+email: ytyin [at] link.cuhk.edu.hk
 socials:
   - name: Google Scholar
     url: "#"
+    icon: ai ai-google-scholar
   - name: GitHub
     url: "#"
+    icon: fab fa-github
   - name: Twitter
     url: "#"
+    icon: fab fa-twitter
 ---
 
 ## About Me

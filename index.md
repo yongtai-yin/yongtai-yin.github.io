@@ -14,9 +14,9 @@ socials:
   - name: GitHub
     url: "#"
     icon: fab fa-github
-  - name: Twitter
+  - name: Linkedin
     url: "#"
-    icon: fab fa-twitter
+    icon: fab fa-linkedin
 ---
 
 ## About Me

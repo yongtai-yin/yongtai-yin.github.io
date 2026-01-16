@@ -36,9 +36,9 @@
                     <div class="profile-bio">{{ page.bio_school }}</div>
                     <div class="profile-contact">
                         <p>{{ page.email }}</p>
-                        <p style="font-size: 1.25em;">
+                        <div style="display: flex; justify-content: space-between; font-size: 2em; margin-top: 10px; width: 100%;">
                             {% for social in page.socials %}
-                            <a href="{{ social.url }}" title="{{ social.name }}" style="margin-right: 5px;">
+                            <a href="{{ social.url }}" title="{{ social.name }}">
                                 {% if social.icon %}
                                     <i class="{{ social.icon }}"></i>
                                 {% else %}
@@ -46,7 +46,7 @@
                                 {% endif %}
                             </a>
                             {% endfor %}
-                        </p>
+                        </div>
                     </div>
                 </aside>
 

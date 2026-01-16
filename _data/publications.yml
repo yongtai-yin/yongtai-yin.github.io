@@ -1,15 +1,15 @@
-- title: "Joint Multipath Channel Estimation and Array Channel Inconsistency Calibration for Massive MIMO Systems"
-  authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Yanyun Gong, Neeraj Kumar, Ling Wang, Joel J. P. C. Rodrigues"
-  venue: "IEEE Internet of Things Journal, 2024"
+- title: "DOA Estimation Based on Smoothed Sparse Reconstruction with Time-Modulated Linear Arrays"
+  authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Tiantian Dai, Ling Wang"
+  venue: "Signal Processing, 2024"
   # pdf: "#"
   # project: "#"
   # code: "#"
   # bibtex: "#"
   selected: true # Used to filter for the homepage
 
-- title: "DOA Estimation Based on Smoothed Sparse Reconstruction with Time-Modulated Linear Arrays"
-  authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Tiantian Dai, Ling Wang"
-  venue: "Signal Processing, 2024"
+- title: "Joint Multipath Channel Estimation and Array Channel Inconsistency Calibration for Massive MIMO Systems"
+  authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Yanyun Gong, Neeraj Kumar, Ling Wang, Joel J. P. C. Rodrigues"
+  venue: "IEEE Internet of Things Journal, 2024"
   selected: true
 
 - title: "Robust Sparse Direct Localization of Smart Vehicle  With Partly Calibrated Time Modulated Arrays"

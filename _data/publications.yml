@@ -1,20 +1,23 @@
-- title: "Deep Learning for Something Amazing"
-  authors: "<strong>Yongtai Yin</strong>, Li Si, Wang Wu"
-  venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2026"
-  pdf: "#"
-  code: "#"
-  bibtex: "#"
+- title: "Joint Multipath Channel Estimation and Array Channel Inconsistency Calibration for Massive MIMO Systems"
+  authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Yanyun Gong, Neeraj Kumar, Ling Wang, Joel J. P. C. Rodrigues"
+  venue: "IEEE Internet of Things Journal, 2024"
+  # pdf: "#"
+  # project: "#"
+  # code: "#"
+  # bibtex: "#"
   selected: true # Used to filter for the homepage
 
-- title: "Another Great Paper Title"
-  authors: "Li Si, <strong>Yongtai Yin</strong>, Wang Wu"
-  venue: "International Conference on Machine Learning (ICML), 2025"
-  pdf: "#"
-  project: "#"
+- title: "DOA Estimation Based on Smoothed Sparse Reconstruction with Time-Modulated Linear Arrays"
+  authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Tiantian Dai, Ling Wang"
+  venue: "Signal Processing, 2024"
   selected: true
 
-- title: "An Older Paper"
-  authors: "<strong>Yongtai Yin</strong>, Zhang San"
-  venue: "ECCV, 2024"
-  pdf: "#"
+- title: "Robust Sparse Direct Localization of Smart Vehicle  With Partly Calibrated Time Modulated Arrays"
+  authors: "Yuexian Wang, Mohammad S. Obaidat, <strong>Yongtai Yin<strong>, Ling Wang, Joel J. P. C. Rodrigues, Balqies Sadoun"
+  venue: "IEEE Transactions on Intelligent Transportation Systems, 2023"
+  selected: true
+
+- title: "Biquaternion-Based DOA Estimation of Noncircular Signals with Time-Modulated Antenna Arrays"
+  authors: "<strong>Yongtai Yin<strong>, Yuexian Wang, Yanyun Gong, Zhaolin Zhang, Ling Wang"
+  venue: "AEU - International Journal of Electronics and Communications, 2023"
   selected: false

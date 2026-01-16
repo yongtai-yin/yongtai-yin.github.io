@@ -1,0 +1,16 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Node
+node_modules/
+
+# VS Code
+.vscode/

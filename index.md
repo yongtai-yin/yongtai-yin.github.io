@@ -12,7 +12,7 @@ socials:
     url: "#"
     icon: ai ai-google-scholar
   - name: GitHub
-    url: "#"
+    url: "https://github.com/yongtai-yin"
     icon: fab fa-github
   - name: Linkedin
     url: "#"
@@ -21,18 +21,20 @@ socials:
 
 ## About Me
 
-XXX
+My name is YIN, Yongtai (殷永泰). I am currently a Ph.D. student at the [DSP & Speech Technology Laboratory](http://dsp.ee.cuhk.edu.hk) in the Department of Electronic Engineering at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk) (CUHK), under the supervision of [Prof. Wing-Kin Ma](https://scholar.google.com/citations?user=zSjjF_UAAAAJ&hl).
+
+Prior to this, I obtained my B.Eng. and M.Eng. degrees in Communication Engineering from [Northwestern Polytechnical University](https://en.nwpu.edu.cn/) (NWPU) in 2021 and 2024, respectively.
 
 ## News
 
 <table class="news-table">
     <tr>
-        <td class="news-date">Jan 2026</td>
-        <td class="news-text">One paper accepted to <strong>CVPR 2026</strong>!</td>
+        <td class="news-date">Oct 2024</td>
+        <td class="news-text">My master's thesis was selected as the `Outstanding Master's Thesis` of [NWPU](https://en.nwpu.edu.cn/) 2024.</td>
     </tr>
     <tr>
-        <td class="news-date">Sep 2025</td>
-        <td class="news-text">Joined University of XXX.</td>
+        <td class="news-date">Aug 2024</td>
+        <td class="news-text">I commenced my doctoral studies in the Department of Electronic Engineering at [CUHK](https://www.cuhk.edu.hk) !</td>
     </tr>
 </table>
 

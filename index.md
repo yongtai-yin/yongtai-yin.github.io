@@ -31,7 +31,11 @@ Optimization for Signal Processing, Deep Learning (Generative Models), Wireless 
 
 ## News
 
-<table class="news-table">
+- **[Oct 2024]** My master's thesis was selected as the `Outstanding Master's Thesis` of [NWPU](https://en.nwpu.edu.cn/) 2024.
+
+- **[Aug 2024]** I commenced my doctoral studies in the Department of Electronic Engineering at [CUHK](https://www.cuhk.edu.hk) !
+
+<!-- <table class="news-table">
     <tr>
         <td class="news-date">Oct 2024</td>
         <td class="news-text">My master's thesis was selected as the `Outstanding Master's Thesis` of [NWPU](https://en.nwpu.edu.cn/) 2024.</td>
@@ -40,7 +44,7 @@ Optimization for Signal Processing, Deep Learning (Generative Models), Wireless 
         <td class="news-date">Aug 2024</td>
         <td class="news-text">I commenced my doctoral studies in the Department of Electronic Engineering at [CUHK](https://www.cuhk.edu.hk) !</td>
     </tr>
-</table>
+</table> -->
 
 ## Selected Publications
 

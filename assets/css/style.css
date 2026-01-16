@@ -5,6 +5,7 @@
     --bg-color: #fff;
     --gray-color: #828282;
     --border-color: #e8e8e8;
+    --nav-height: 60px; /* Define navbar height variable */
 }
 
 body {
@@ -22,15 +23,16 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation Bar */
+/* --- Navbar --- */
 .navbar {
     border-bottom: 1px solid var(--border-color);
-    padding: 15px 0;
-    margin-bottom: 40px;
-    position: sticky;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    position: sticky; /* Keep navbar fixed at the top */
     top: 0;
     background: rgba(255, 255, 255, 0.95);
-    z-index: 100;
+    z-index: 1000;
     backdrop-filter: blur(5px);
 }
 
@@ -38,6 +40,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .nav-brand {
@@ -63,24 +66,25 @@ body {
     color: var(--link-color);
 }
 
-/* --- Layout for Homepage (Sidebar + Content) --- */
+/* --- Homepage Layout (Sidebar + Content) --- */
 .profile-layout {
-    display: flex; /* Changed from grid to flex for better sticky handling */
-    gap: 50px;
+    display: flex; 
+    gap: 60px; /* Gap between sidebar and main content */
+    margin-top: 40px;
     margin-bottom: 60px;
-    align-items: flex-start; /* Crucial for sticky to work */
+    align-items: flex-start; /* Crucial: Align start allows sticky positioning to work */
 }
 
-/* Sidebar Styling */
+/* --- Left Sidebar --- */
 .profile-sidebar {
-    width: 280px;
-    flex-shrink: 0;
-    text-align: left;
+    width: 260px; /* Fixed width for desktop */
+    flex-shrink: 0; /* Prevent shrinking */
     
-    /* Sticky Magic Here */
+    /* === Desktop Core: Sticky Sidebar === */
     position: -webkit-sticky;
     position: sticky;
-    top: 100px; /* Distance from top of viewport (navbar height + buffer) */
+    /* Top offset = Navbar height + extra padding */
+    top: calc(var(--nav-height) + 40px); 
 }
 
 .avatar {
@@ -89,25 +93,26 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .profile-name {
     font-size: 1.8em;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 5px;
+    color: #000;
 }
 
 .profile-bio {
     font-size: 0.95em;
     color: #555;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .profile-contact {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 0.9em;
-    color: #666;
+    line-height: 1.8;
 }
 
 .profile-contact a {
@@ -115,18 +120,18 @@ body {
     text-decoration: none;
 }
 
-/* Main Content Area */
+/* --- Right Main Content --- */
 .main-content {
     flex-grow: 1;
-    min-width: 0; /* Prevents flex items from overflowing */
+    min-width: 0; /* Prevent content overflow issues */
 }
 
 .main-content h2 {
     font-size: 1.5em;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 50px; /* Spacing between sections */
+    margin-bottom: 25px;
     color: #000;
 }
 
@@ -134,57 +139,61 @@ body {
     margin-top: 0;
 }
 
-/* News Section */
+/* News Table Styling */
 .news-table {
     width: 100%;
     border-collapse: collapse;
 }
 
 .news-date {
-    width: 15%;
+    width: 18%;
+    min-width: 80px; /* Prevent date wrapping on small screens */
     vertical-align: top;
     font-weight: bold;
     color: #444;
     padding-bottom: 15px;
     font-size: 0.9em;
-    white-space: nowrap;
-    padding-right: 15px;
 }
 
 .news-text {
     padding-bottom: 15px;
 }
 
-/* Publications */
+/* Publications List Styling */
 .pub-item {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .pub-title {
     font-weight: 600;
     color: #000;
     display: block;
+    margin-bottom: 4px;
 }
 
 .pub-authors {
     color: #444;
+    font-size: 0.95em;
+    margin-bottom: 4px;
 }
 
 .pub-venue {
     font-style: italic;
     color: #666;
+    font-size: 0.9em;
+    margin-bottom: 8px;
 }
 
 .pub-links a {
     display: inline-block;
     border: 1px solid var(--link-color);
     color: var(--link-color);
-    padding: 2px 8px;
-    border-radius: 4px;
+    padding: 2px 10px;
+    border-radius: 15px; /* Capsule style buttons */
     font-size: 0.75em;
-    margin-right: 5px;
-    margin-top: 5px;
+    margin-right: 8px;
     text-decoration: none;
+    transition: all 0.2s;
 }
 
 .pub-links a:hover {
@@ -192,38 +201,65 @@ body {
     color: #fff;
 }
 
-/* PDF Embed Container */
+/* PDF Viewer Container */
 .pdf-container {
     width: 100%;
-    height: 800px;
+    height: 85vh; /* 85% of viewport height */
     border: 1px solid var(--border-color);
+    margin-top: 20px;
 }
 
 /* Footer */
 footer {
     border-top: 1px solid var(--border-color);
-    padding: 30px 0;
+    padding: 40px 0;
     text-align: center;
     color: var(--gray-color);
     font-size: 0.85em;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
-/* Mobile Responsive */
+/* =========================================
+   Responsive Design (Mobile & Tablet)
+   Triggered when screen width is < 768px
+   ========================================= */
 @media (max-width: 768px) {
+    /* 1. Change Layout: Row -> Column */
     .profile-layout {
         flex-direction: column;
+        gap: 30px;
+        margin-top: 20px;
     }
     
+    /* 2. Reset Sidebar Styling */
     .profile-sidebar {
-        width: 100%;
-        text-align: center;
-        position: relative; /* Disable sticky on mobile */
+        width: 100%;       /* Full width */
+        text-align: center; /* Center align text */
+        
+        /* === Mobile Core: Disable Sticky === */
+        /* On mobile, sidebar should scroll with the page */
+        position: relative; 
         top: 0;
     }
     
+    /* 3. Resize Avatar */
     .avatar {
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
+    }
+
+    /* 4. Adjust Navbar Spacing */
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        font-size: 0.9em;
+    }
+
+    /* 5. Adjust Content Headings */
+    .main-content h2 {
+        margin-top: 30px;
+        font-size: 1.3em;
     }
 }

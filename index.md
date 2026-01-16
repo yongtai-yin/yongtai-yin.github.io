@@ -21,7 +21,7 @@ socials:
 
 ## About Me
 
-I am a first-year Ph.D. student at the University of XXX, advised by Prof. YYY. My research interests include **Computer Vision**, **Machine Learning**, and **AI for Sustainability**.
+XXX
 
 ## News
 

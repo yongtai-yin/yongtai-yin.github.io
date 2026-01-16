@@ -1,4 +1,13 @@
-title: Yongtai's Academic Homepage
-description: Personal Academic Website
-theme: null
-markdown: kramdown
+title: Yongtai Yin
+description: Ph.D. Student at CUHK
+baseurl: ""
+url: ""
+
+# Navigation Links
+navigation:
+  - title: CV
+    url: /assets/pdf/cv.pdf
+  - title: Publications
+    url: #publications
+  - title: Blog
+    url: #blog

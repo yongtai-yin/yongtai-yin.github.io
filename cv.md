@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Curriculum Vitae
+permalink: /cv/
 ---
 
 <div class="pdf-container">

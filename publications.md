@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Publications
+permalink: /publications/
 ---
 
 <div class="pub-list">

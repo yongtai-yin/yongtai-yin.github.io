@@ -25,6 +25,10 @@ My name is YIN, Yongtai (殷永泰). I am currently a Ph.D. student at the [DSP 
 
 Prior to this, I obtained my B.Eng. and M.Eng. degrees in Communication Engineering from [Northwestern Polytechnical University](https://en.nwpu.edu.cn/) (NWPU) in 2021 and 2024, respectively.
 
+## Research Interests
+
+Optimization for Signal Processing, Deep Learning (Generative Models), Wireless Sensing
+
 ## News
 
 <table class="news-table">

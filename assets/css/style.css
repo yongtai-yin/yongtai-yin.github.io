@@ -98,8 +98,8 @@ a:hover {
 }
 
 .avatar {
-    width: 220px; /* Larger avatar */
-    height: 220px;
+    width: 200px; /* Adjusted size for better proportion */
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -107,28 +107,28 @@ a:hover {
 }
 
 .profile-name {
-    font-size: 2.2em; /* Much larger Name */
+    font-size: 1.8em; /* Adjusted proportion */
     font-weight: 700;
     margin-bottom: 5px;
     color: #000;
 }
 
 .profile-bio {
-    font-size: 1.1em; /* Larger role/school text */
+    font-size: 1.0em; /* Adjusted proportion */
     color: #555;
     margin-bottom: 4px; /* Increased spacing */
 }
 
 .profile-contact {
     margin-top: 25px;
-    font-size: 1.0em; /* Larger contact text */
+    font-size: 1.0em; /* Adjusted proportion */
     line-height: 1.8;
 }
 
 .social-links {
     display: flex;
-    gap: 20px;
-    font-size: 2.2em; /* Increase icon size */
+    gap: 16px;
+    font-size: 1.8em; /* Adjusted proportion */
     margin-top: 15px;
 }
 
@@ -144,7 +144,7 @@ a:hover {
 }
 
 .main-content h2 {
-    font-size: 1.8em; /* Larger section headers */
+    font-size: 1.6em; /* Adjusted proportion */
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
     margin-top: 50px; /* Spacing between sections */
@@ -184,21 +184,21 @@ a:hover {
 .pub-title {
     font-weight: 700; /* Bolder */
     color: #000;
-    font-size: 1.1em; /* Larger title */
+    font-size: 1.05em; /* Adjusted proportion */
     display: block;
     margin-bottom: 6px;
 }
 
 .pub-authors {
     color: #444;
-    font-size: 1.0em; /* Larger authors */
+    font-size: 0.95em; /* Adjusted proportion */
     margin-bottom: 6px;
 }
 
 .pub-venue {
     font-style: italic;
     color: #666;
-    font-size: 0.95em; /* Larger venue */
+    font-size: 0.95em; /* Adjusted proportion */
     margin-bottom: 10px;
 }
 

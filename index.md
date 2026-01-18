@@ -15,7 +15,7 @@ socials:
     url: "https://github.com/yongtai-yin"
     icon: fab fa-github
   - name: Linkedin
-    url: "www.linkedin.com/in/yongtai-yin"
+    url: "https://www.linkedin.com/in/yongtai-yin"
     icon: fab fa-linkedin
 ---
 
@@ -31,9 +31,13 @@ Optimization for Signal Processing, Deep Learning (Generative Models), Wireless 
 
 ## News
 
-- **[Oct 2024]** My master's thesis was selected as the `Outstanding Master's Thesis` of [NWPU](https://en.nwpu.edu.cn/) 2024.
+- **[Jan 2026]** One paper has been accepted to [ICASSP 2026](https://2026.ieeeicassp.org/) (Barcelona, Spain). See you in May!
 
-- **[Aug 2024]** I commenced my doctoral studies in the Department of Electronic Engineering at [CUHK](https://www.cuhk.edu.hk) !
+- **[Jun 2025]** Successfully passed my `PhD Candidacy Examination`!
+
+- **[Oct 2024]** My master's thesis was selected as the `Outstanding Master's Thesis` of [NWPU](https://en.nwpu.edu.cn/) 2024!
+
+- **[Aug 2024]** I commenced my doctoral studies in the Department of Electronic Engineering at [CUHK](https://www.cuhk.edu.hk)!
 
 <!-- <table class="news-table">
     <tr>

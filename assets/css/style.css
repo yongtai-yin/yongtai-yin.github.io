@@ -98,8 +98,8 @@ a:hover {
 }
 
 .avatar {
-    width: 200px; /* Adjusted size for better proportion */
-    height: 200px;
+    width: 180px; /* Adjusted size for better proportion */
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -107,28 +107,28 @@ a:hover {
 }
 
 .profile-name {
-    font-size: 1.8em; /* Adjusted proportion */
+    font-size: 1.6em; /* Adjusted proportion */
     font-weight: 700;
     margin-bottom: 5px;
     color: #000;
 }
 
 .profile-bio {
-    font-size: 1.0em; /* Adjusted proportion */
+    font-size: 0.95em; /* Adjusted proportion */
     color: #555;
     margin-bottom: 4px; /* Increased spacing */
 }
 
 .profile-contact {
     margin-top: 25px;
-    font-size: 1.0em; /* Adjusted proportion */
+    font-size: 0.95em; /* Adjusted proportion */
     line-height: 1.8;
 }
 
 .social-links {
     display: flex;
     gap: 16px;
-    font-size: 1.8em; /* Adjusted proportion */
+    font-size: 1.6em; /* Adjusted proportion */
     margin-top: 15px;
 }
 

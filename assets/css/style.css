@@ -176,6 +176,18 @@ a:hover {
     padding-bottom: 15px;
 }
 
+/* Styled code blocks for inline highlighting in news */
+code {
+    background-color: rgba(27, 31, 35, 0.05); /* Light gray background */
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-family: var(--font-main); /* Inherit main font, avoid monospace clash */
+    font-size: 0.9em;
+    color: #24292e; /* Dark gray text */
+    margin: 0 2px;
+}
+
+
 /* Publications List Styling */
 .pub-item {
     margin-bottom: 35px; /* More breathing room */

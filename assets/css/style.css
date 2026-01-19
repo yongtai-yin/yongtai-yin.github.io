@@ -178,12 +178,12 @@ a:hover {
 
 /* Styled code blocks for inline highlighting in news */
 code {
-    background-color: rgba(27, 31, 35, 0.05); /* Light gray background */
-    border-radius: 6px;
-    padding: 2px 6px;
-    font-family: var(--font-main); /* Inherit main font, avoid monospace clash */
-    font-size: 0.9em;
-    color: #24292e; /* Dark gray text */
+    background-color: #f3f4f6; /* Slightly more visible gray */
+    border-radius: 4px;
+    padding: 0.2em 0.4em;
+    font-family: inherit; /* Use the same font as the surrounding text */
+    font-size: inherit;   /* Maintain the same font size */
+    color: #c7254e;       /* Markdown-like emphasis color (optional, remove if unwanted) */
     margin: 0 2px;
 }
 

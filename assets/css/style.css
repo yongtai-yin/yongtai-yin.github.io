@@ -176,6 +176,10 @@ a:hover {
     padding-bottom: 15px;
 }
 
+.news-text p {
+    margin: 0;
+}
+
 /* Styled code blocks for inline highlighting in news */
 code {
     background-color: #f3f4f6; /* Slightly more visible gray */

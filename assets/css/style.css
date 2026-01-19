@@ -163,17 +163,17 @@ a:hover {
 }
 
 .news-date {
-    width: 18%;
-    min-width: 80px; /* Prevent date wrapping on small screens */
+    width: 15%;       /* Reduced from 18% */
+    min-width: 100px; /* Prevent date wrapping */
     vertical-align: top;
     font-weight: bold;
     color: #444;
-    padding-bottom: 15px;
-    font-size: 0.9em;
+    padding-bottom: 20px; /* Increased slightly for better separation */
+    /* font-size: 0.9em; Removed to make font size consistent with content */
 }
 
 .news-text {
-    padding-bottom: 15px;
+    padding-bottom: 20px; /* Match spacing */
 }
 
 .news-text p {

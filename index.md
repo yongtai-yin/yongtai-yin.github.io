@@ -33,9 +33,9 @@ Optimization for Signal Processing, Deep Learning (Generative Models), Wireless 
 
 - **[Jan 2026]** One paper has been accepted to [ICASSP 2026](https://2026.ieeeicassp.org/) (Barcelona, Spain). See you in May!
 
-- **[Jun 2025]** Successfully passed my `PhD Candidacy Examination`!
+- **[Jun 2025]** Successfully passed my *PhD Candidacy Examination*!
 
-- **[Oct 2024]** My master's thesis was selected as the `Outstanding Master's Thesis` of [NWPU](https://en.nwpu.edu.cn/) 2024!
+- **[Oct 2024]** My master's thesis was selected as the *Outstanding Master's Thesis* of [NWPU](https://en.nwpu.edu.cn/) 2024!
 
 - **[Aug 2024]** I commenced my doctoral studies in the Department of Electronic Engineering at [CUHK](https://www.cuhk.edu.hk)!
 

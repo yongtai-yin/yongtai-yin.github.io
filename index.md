@@ -27,7 +27,7 @@ Prior to this, I obtained my B.Eng. and M.Eng. degrees in Communication Engineer
 
 ## Research Interests
 
-Optimization for Signal Processing, Deep Learning (Generative Models), Wireless Sensing
+Optimization for Signal Processing, Model-Based Deep Learning, Generative Models, Wireless Sensing
 
 ## News
 

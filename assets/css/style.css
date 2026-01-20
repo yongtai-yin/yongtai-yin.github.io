@@ -194,7 +194,64 @@ code {
 
 /* Publications List Styling */
 .pub-item {
-    margin-bottom: 35px; /* More breathing room */
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px; /* More breathing room */
+}
+
+.pub-img-col {
+    flex-shrink: 0;
+    width: 200px; /* Fixed width for image column */
+    display: flex;
+    flex-direction: column;
+}
+
+.pub-abbr {
+    display: inline-block;
+    background-color: #00369f; /* Deep blue like reference or user pref */
+    color: #fff;
+    padding: 2px 8px;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-bottom: 8px; /* Space between abbr and image */
+    width: fit-content;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.pub-img {
+    width: 100%;
+    /* height: auto;  removed to allow object-fit if needed, but width 100% usually enough */
+    border-radius: 4px; /* Optional: rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Drop shadow for depth */
+    transition: transform 0.2s;
+    border: 1px solid #eee;
+}
+
+.pub-img:hover {
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.pub-content-col {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Align content to top */
+}
+
+/* Responsive adjustment for pub-item */
+@media (max-width: 600px) {
+    .pub-item {
+        flex-direction: column;
+    }
+    
+    .pub-img-col {
+        width: 100%;
+        max-width: 300px; /* Limit width on mobile if desired */
+        margin-bottom: 10px;
+    }
 }
 
 .pub-title {

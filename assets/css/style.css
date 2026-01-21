@@ -210,25 +210,26 @@ code {
     display: block; /* Make it block to span width */
     width: 100%;    /* Match the column width (and thus the image width) */
     text-align: center;
-    background-color: #0066cc; /* Lighter, brighter blue */
+    background-color: #00369f; /* Reverted to deeper blue based on 'AJP' reference which is dark blue */
     color: #fff;
-    padding: 3px 0; /* Reduced padding for a sleeker look */
-    font-size: 0.85em;
-    font-weight: 600; /* Reduced weight from bold */
+    padding: 3px 0; /* Vertical padding */
+    font-size: 0.9em; /* Larger font */
+    font-weight: 800; /* Extra bold */
     text-transform: uppercase;
-    border-radius: 2px; /* Slightly more squared/modern */
-    margin-bottom: 8px; 
+    border-radius: 6px; /* Soft rounded corners like reference */
+    margin-bottom: 10px; /* Increased space between badge and image */
     box-sizing: border-box; /* Include padding in width */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Lighter shadow */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    letter-spacing: 0.5px;
 }
 
 .pub-img {
     width: 100%;
     display: block; /* Remove inline gap */
-    border-radius: 4px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+    border-radius: 8px; /* Softer radius matching the badge */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
     transition: transform 0.2s;
-    border: 1px solid #eee;
+    border: 1px solid #f0f0f0; /* Very subtle border */
 }
 
 .pub-img:hover {
@@ -241,6 +242,7 @@ code {
     display: flex;
     flex-direction: column;
     justify-content: start; /* Align content to top */
+    padding-top: 2px; /* Slight offset to align text baseline with the badge/image top */
 }
 
 /* Responsive adjustment for pub-item */
@@ -258,15 +260,16 @@ code {
 
 .pub-title {
     font-weight: 700; /* Bolder */
-    color: #000;
-    font-size: 1.05em; /* Adjusted proportion */
+    color: #111; /* More stark black */
+    font-size: 1.1em; /* Larger title relative to badge */
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
 
 .pub-authors {
     color: #444;
-    font-size: 0.95em; /* Adjusted proportion */
+    font-size: 1.05em; /* Adjusted proportion */
     margin-bottom: 6px;
 }
 

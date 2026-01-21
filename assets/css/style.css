@@ -213,7 +213,7 @@ code {
     background-color: #00369f; /* Reverted to deeper blue based on 'AJP' reference which is dark blue */
     color: #fff;
     padding: 3px 0; /* Vertical padding */
-    font-size: 0.8em; /* Larger font */
+    font-size: 0.7em; /* Larger font */
     font-weight: 800; /* Extra bold */
     text-transform: uppercase;
     border-radius: 10px; /* Soft rounded corners like reference */

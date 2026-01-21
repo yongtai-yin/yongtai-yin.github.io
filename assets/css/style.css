@@ -214,9 +214,9 @@ code {
     color: #fff;
     padding: 3px 0; /* Vertical padding */
     font-size: 0.75em; /* Larger font */
-    font-weight: 800; /* Extra bold */
+    font-weight: 700; /* Extra bold */
     text-transform: uppercase;
-    border-radius: 8px; /* Soft rounded corners like reference */
+    border-radius: 6px; /* Soft rounded corners like reference */
     margin-bottom: 10px; /* Increased space between badge and image */
     box-sizing: border-box; /* Include padding in width */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
@@ -226,7 +226,7 @@ code {
 .pub-img {
     width: 100%;
     display: block; /* Remove inline gap */
-    border-radius: 8px; /* Softer radius matching the badge */
+    border-radius: 6px; /* Softer radius matching the badge */
     box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
     transition: transform 0.2s;
     border: 1px solid #f0f0f0; /* Very subtle border */

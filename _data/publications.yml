@@ -2,14 +2,14 @@
   authors: "<strong>Yongtai Yin</strong>, Junbin Liu, Wing-Kin Ma"
   venue: "International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026"
   short_venue: "ICASSP" # Abbreviation for the badge
-  image: "" # Path to the image, e.g., /assets/img/publications/icassp26.png
+  image: "/assets/img/2026-ICASSP.png" # Path to the image, e.g., /assets/img/publications/icassp26.png
   selected: true
 
 - title: "DOA Estimation Based on Smoothed Sparse Reconstruction with Time-Modulated Linear Arrays"
   authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Tiantian Dai, Ling Wang"
   venue: "Signal Processing, 2024"
   short_venue: "Signal Proc."
-  image: ""
+  # image: ""
   # pdf: "#"
   # project: "#"
   # code: "#"
@@ -20,19 +20,18 @@
   authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Yanyun Gong, Neeraj Kumar, Ling Wang, Joel J. P. C. Rodrigues"
   venue: "IEEE Internet of Things Journal, 2024"
   short_venue: "IoT-J"
-  image: ""
+  image: "/assets/img/2024-IOTJ.png"
   selected: true
 
 - title: "Robust Sparse Direct Localization of Smart Vehicle  With Partly Calibrated Time Modulated Arrays"
   authors: "Yuexian Wang, Mohammad S. Obaidat, <strong>Yongtai Yin</strong>, Ling Wang, Joel J. P. C. Rodrigues, Balqies Sadoun"
   venue: "IEEE Transactions on Intelligent Transportation Systems, 2023"
   short_venue: "T-ITS"
-  image: ""
+  image: "/assets/img/2023-TITS.png"
   selected: true
 
 - title: "Biquaternion-Based DOA Estimation of Noncircular Signals with Time-Modulated Antenna Arrays"
   authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Yanyun Gong, Zhaolin Zhang, Ling Wang"
   venue: "AEU - International Journal of Electronics and Communications, 2023"
   short_venue: "AEU"
-  image: ""
   selected: false

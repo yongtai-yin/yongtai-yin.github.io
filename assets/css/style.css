@@ -214,7 +214,7 @@ code {
     color: #fff;
     padding: 3px 0; /* Vertical padding */
     font-size: 0.75em; /* Larger font */
-    font-weight: 600; /* Extra bold */
+    font-weight: 800; /* Extra bold */
     text-transform: uppercase;
     border-radius: 8px; /* Soft rounded corners like reference */
     margin-bottom: 10px; /* Increased space between badge and image */

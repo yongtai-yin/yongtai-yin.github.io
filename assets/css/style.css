@@ -195,36 +195,38 @@ code {
 /* Publications List Styling */
 .pub-item {
     display: flex;
-    gap: 20px;
-    margin-bottom: 40px; /* More breathing room */
+    gap: 25px; /* Increased gap */
+    margin-bottom: 50px; /* Increased spacing between items */
+    align-items: flex-start; /* Ensure top alignment */
 }
 
 .pub-img-col {
     flex-shrink: 0;
-    width: 200px; /* Fixed width for image column */
-    display: flex;
-    flex-direction: column;
+    width: 200px; /* Base width */
+    max-width: 200px;
 }
 
 .pub-abbr {
-    display: inline-block;
-    background-color: #00369f; /* Deep blue like reference or user pref */
+    display: block; /* Make it block to span width */
+    width: 100%;    /* Match the column width (and thus the image width) */
+    text-align: center;
+    background-color: #00369f; 
     color: #fff;
-    padding: 2px 8px;
-    font-size: 0.75em;
+    padding: 4px 0; /* Vertical padding */
+    font-size: 0.8em;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-bottom: 8px; /* Space between abbr and image */
-    width: fit-content;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 8px; 
+    box-sizing: border-box; /* Include padding in width */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
 .pub-img {
     width: 100%;
-    /* height: auto;  removed to allow object-fit if needed, but width 100% usually enough */
-    border-radius: 4px; /* Optional: rounded corners */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Drop shadow for depth */
+    display: block; /* Remove inline gap */
+    border-radius: 4px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
     transition: transform 0.2s;
     border: 1px solid #eee;
 }

@@ -2,14 +2,13 @@
   authors: "<strong>Yongtai Yin</strong>, Junbin Liu, Wing-Kin Ma"
   venue: "International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026"
   short_venue: "ICASSP" # Abbreviation for the badge
-  image: "/assets/img/2026-ICASSP.png" # Path to the image, e.g., /assets/img/publications/icassp26.png
   selected: true
 
 - title: "DOA Estimation Based on Smoothed Sparse Reconstruction with Time-Modulated Linear Arrays"
   authors: "<strong>Yongtai Yin</strong>, Yuexian Wang, Tiantian Dai, Ling Wang"
   venue: "Signal Processing, 2024"
   short_venue: "Signal Proc."
-  # image: ""
+  # image: "" # Path to the image, e.g., /assets/img/XXX.png
   # pdf: "#"
   # project: "#"
   # code: "#"

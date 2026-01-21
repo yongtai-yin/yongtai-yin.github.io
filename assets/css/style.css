@@ -210,10 +210,10 @@ code {
     display: block; /* Make it block to span width */
     width: 100%;    /* Match the column width (and thus the image width) */
     text-align: center;
-    background-color: #4e9af1; /* Lighter, brighter blue */
+    background-color: #0066cc; /* Lighter, brighter blue */
     color: #fff;
     padding: 3px 0; /* Reduced padding for a sleeker look */
-    font-size: 0.75em;
+    font-size: 0.85em;
     font-weight: 600; /* Reduced weight from bold */
     text-transform: uppercase;
     border-radius: 2px; /* Slightly more squared/modern */

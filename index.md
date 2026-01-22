@@ -2,10 +2,11 @@
 layout: default
 layout_type: home
 title: Yongtai Yin
-name: Yongtai Yin
+header_name: Yongtai Yin
 avatar: /assets/img/avatar.jpg
-bio_role: Ph.D. Student
-bio_school: The Chinese University of Hong Kong
+bio: |
+  Ph.D. Student  
+  The Chinese University of Hong Kong
 email: ytyin [at] link.cuhk.edu.hk
 socials:
   - name: Google Scholar

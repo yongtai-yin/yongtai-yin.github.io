@@ -175,13 +175,13 @@ a:hover {
 /* Right side avatar group */
 .header-avatar-container {
     flex-shrink: 0; /* Prevent shrinking */
-    width: 25%; /* Approx 20-25% as requested */
+    width: auto; /* Let it grow with the image */
     text-align: right;
 }
 
 .avatar {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: var(--shadow-md);
@@ -190,8 +190,8 @@ a:hover {
 
 .social-links {
     display: flex;
-    gap: 20px;
-    font-size: 1.4em; /* Standard icon size */
+    gap: 24px; /* Slightly wider gap for larger icons */
+    font-size: 2rem; /* Increased size as requested */
     align-items: center;
 }
 

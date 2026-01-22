@@ -128,86 +128,91 @@ a:hover {
 }
 
 
-/* --- Homepage Layout (Sidebar + Content) --- */
-.profile-layout {
-    display: flex; 
-    gap: 60px;
-    margin-top: 60px; /* Increased top margin for breathing room */
-    margin-bottom: 80px;
+
+/* --- New Home Header Layout (Left Text, Right Avatar) --- */
+.home-header {
+    display: flex;
+    justify-content: space-between;
     align-items: flex-start;
+    gap: 60px; /* Space between text and avatar */
+    margin-top: 80px; /* Top spacing */
+    margin-bottom: 80px; /* Spacing between header and content */
 }
 
-/* --- Left Sidebar --- */
-.profile-sidebar {
-    width: 280px;
-    flex-shrink: 0;
-    position: -webkit-sticky;
-    position: sticky;
-    top: calc(var(--nav-height) + 40px); 
+/* Left side text group */
+.header-text {
+    flex: 1; /* Take remaining space */
 }
 
-.avatar {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 25px;
-    box-shadow: var(--shadow-md);
-    border: 3px solid var(--bg-card); /* Optional: add border to make it pop on custom bg */
-}
-
-.profile-name {
-    font-size: 1.8em; /* Bold H1 style for name */
-    font-weight: 700;
-    margin-bottom: 8px;
+.header-name {
+    font-size: 2.5em; /* Large H1 */
+    font-weight: 800;
+    margin-bottom: 15px;
     color: var(--text-primary);
     line-height: 1.2;
 }
 
-.profile-bio {
+.header-bio {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    margin-bottom: 8px; /* Spacing between bio lines */
+    line-height: 1.5;
+}
+
+.header-email {
+    margin-top: 20px;
     font-size: 1em;
     color: var(--text-secondary);
-    margin-bottom: 6px;
 }
 
-.profile-contact {
+.header-actions {
     margin-top: 30px;
-    font-size: 0.95em;
-    line-height: 1.8;
-    color: var(--text-secondary);
 }
 
-.profile-contact a {
-    color: var(--accent-color);
+/* Right side avatar group */
+.header-avatar-container {
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 25%; /* Approx 20-25% as requested */
+    text-align: right;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow-md);
+    border: 3px solid var(--bg-card);
 }
 
 .social-links {
     display: flex;
-    gap: 16px;
-    font-size: 1.5em; /* Slightly smaller cleaner icons */
-    margin-top: 20px;
+    gap: 20px;
+    font-size: 1.4em; /* Standard icon size */
+    align-items: center;
 }
 
 .social-links a {
     color: var(--text-secondary);
-    transition: color 0.2s;
+    transition: color 0.2s, transform 0.2s;
 }
 
 .social-links a:hover {
     color: var(--accent-color);
+    transform: translateY(-2px);
 }
 
-/* --- Right Main Content --- */
+/* --- Main Content Global --- */
+
 .main-content {
-    flex-grow: 1;
     min-width: 0;
-    max-width: 65ch; /* Limit reading width as requested */
+    max-width: 800px; /* Constrain reading width for single column centered */
+    margin: 0 auto; /* Center alignment */
 }
 
-/* Modifier class for single-column pages (CV, Publications) */
+/* Modifiers for specific pages if needed, but 800px is a good default for "modern standard" main text */
 .main-content.single-column {
-    max-width: 900px; /* Wider container for lists/tables */
-    margin: 60px auto 0; /* Center horizontally and add top margin */
+    max-width: 900px; /* Slightly wider for lists/tables */
 }
 
 /* Ensure long-form text within single-column pages is still readable */
@@ -451,20 +456,64 @@ footer {
         font-size: 1.3em;
     }
 
-    /* 6. Publications: Hide Image/Badge Column on mobile for cleaner view */
+    /* 6. Publications: Hide Image/Badge Column on mobile */
     .pub-item {
-        display: block; /* Switch to simple block layout */
+        display: block; 
         margin-bottom: 40px;
     }
     
-    /* Hide the left column (badge & image) completely */
     .pub-img-col {
         display: none;
     }
 
-    /* Ensure content takes full width */
     .pub-content-col {
         width: 100%;
         padding-top: 0;
+    }
+
+    /* 7. New Header Stack Layout for Mobile */
+    .home-header {
+        flex-direction: column-reverse; /* Text bottom, Avatar top? Or explicit order */
+        /* Let's try Scheme A: Avatar Top, Text Below */
+        flex-direction: column; 
+        align-items: center; /* Center everything */
+        text-align: center;
+        gap: 30px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    /* Move avatar to top (visually first if flex-direction is column) */
+    /* Wait, the HTML structure is Text First, Avatar Second. 
+       So default 'column' puts Text on Top.
+       To get Avatar Top, we need 'column-reverse'.
+    */
+    .home-header {
+        flex-direction: column-reverse;
+    }
+
+    .header-text {
+        width: 100%;
+    }
+
+    .header-avatar-container {
+        width: 100%;
+        text-align: center; /* Center the image */
+        margin-bottom: 20px;
+    }
+    
+    .social-links {
+        justify-content: center; /* Center icons */
+        margin-top: 25px;
+    }
+
+    .header-name {
+        font-size: 2em;
+    }
+
+    /* Container Padding */
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }

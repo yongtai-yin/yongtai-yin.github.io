@@ -37,32 +37,36 @@
     <!-- Main Container -->
     <div class="container">
         {% if page.layout_type == 'home' %}
-            <!-- Two-Column Layout (Sidebar + Content) -->
-            <div class="profile-layout">
-                <!-- Left Sidebar -->
-                <aside class="profile-sidebar">
-                    <img src="{{ page.avatar | relative_url }}" alt="{{ page.title }}" class="avatar">
-                    <!-- FIX: Use page.name specifically -->
-                    <div class="profile-name">{{ page.title }}</div>
-                    <div class="profile-bio">{{ page.bio_role }}</div>
-                    <div class="profile-bio">{{ page.bio_school }}</div>
-                    <div class="profile-contact">
-                        <p>{{ page.email }}</p>
-                        <div class="social-links">
-                            {% for social in page.socials %}
-                            <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" title="{{ social.name }}">
-                                {% if social.icon %}
-                                    <i class="{{ social.icon }}"></i>
-                                {% else %}
-                                    {{ social.name }}
-                                {% endif %}
-                            </a>
-                            {% endfor %}
+            <!-- Single Column Layout with Hero Header -->
+            <div class="home-layout">
+                <header class="home-header">
+                    <div class="header-text">
+                        <h1 class="header-name">{{ page.name }}</h1>
+                        <div class="header-bio">{{ page.bio_role }}</div>
+                        <div class="header-bio">{{ page.bio_school }}</div>
+                        <div class="header-email">{{ page.email }}</div>
+                        
+                        <div class="header-actions">
+                            <!-- Social Icons -->
+                            <div class="social-links">
+                                {% for social in page.socials %}
+                                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" title="{{ social.name }}">
+                                    {% if social.icon %}
+                                        <i class="{{ social.icon }}"></i>
+                                    {% else %}
+                                        {{ social.name }}
+                                    {% endif %}
+                                </a>
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
-                </aside>
+                    
+                    <div class="header-avatar-container">
+                        <img src="{{ page.avatar | relative_url }}" alt="{{ page.name }}" class="avatar">
+                    </div>
+                </header>
 
-                <!-- Right Main Content -->
                 <main class="main-content">
                     {{ content }}
                 </main>

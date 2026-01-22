@@ -451,14 +451,20 @@ footer {
         font-size: 1.3em;
     }
 
+    /* 6. Publications: Hide Image/Badge Column on mobile for cleaner view */
     .pub-item {
-        flex-direction: column;
-        gap: 20px;
+        display: block; /* Switch to simple block layout */
+        margin-bottom: 40px;
     }
     
+    /* Hide the left column (badge & image) completely */
     .pub-img-col {
+        display: none;
+    }
+
+    /* Ensure content takes full width */
+    .pub-content-col {
         width: 100%;
-        max-width: 250px;
-        margin: 0 auto;
+        padding-top: 0;
     }
 }

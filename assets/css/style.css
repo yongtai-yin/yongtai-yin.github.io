@@ -204,6 +204,25 @@ a:hover {
     max-width: 65ch; /* Limit reading width as requested */
 }
 
+/* Modifier class for single-column pages (CV, Publications) */
+.main-content.single-column {
+    max-width: 900px; /* Wider container for lists/tables */
+    margin: 60px auto 0; /* Center horizontally and add top margin */
+}
+
+/* Ensure long-form text within single-column pages is still readable */
+.main-content.single-column p {
+    max-width: 75ch; /* Slightly wider than default but still readable */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensure full-width elements in single column behave */
+.main-content.single-column .pub-list,
+.main-content.single-column .pdf-container {
+    max-width: 100%;
+}
+
 .main-content h2 {
     font-size: 1.5em; /* SemiBold/Bold */
     font-weight: 600;

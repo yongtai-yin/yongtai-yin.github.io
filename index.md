@@ -4,9 +4,7 @@ layout_type: home
 title: Yongtai Yin
 header_name: Yongtai Yin
 avatar: /assets/img/avatar.jpg
-bio: |
-  Ph.D. Student  
-  The Chinese University of Hong Kong
+bio: Ph.D. Student at [CUHK](https://www.cuhk.edu.hk)
 email: ytyin [at] link.cuhk.edu.hk
 socials:
   - name: Google Scholar

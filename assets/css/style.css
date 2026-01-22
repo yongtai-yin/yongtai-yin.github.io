@@ -132,20 +132,19 @@ a:hover {
 /* --- New Home Header Layout (Left Text, Right Avatar) --- */
 .home-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center; /* Vertically align center as requested */
-    gap: 40px; /* Reduced gap to bring them closer in narrower container */
+    gap: 60px; /* Increased gap slightly */
     margin-top: 60px; 
     margin-bottom: 60px; 
-    max-width: 900px; /* Match body width */
+    max-width: 750px; /* Reduced from 900px to shorten whitespace */
     margin-left: auto; /* Center the header block itself */
     margin-right: auto;
 }
 
 /* Left side text group */
 .header-text {
-    flex: 0 0 55%; /* Fixed 60% width */
-    max-width: 55%;
+    flex: 1; /* Automatically fill remaining space */
 }
 
 .header-name {
@@ -175,11 +174,10 @@ a:hover {
 
 /* Right side avatar group */
 .header-avatar-container {
-    flex: 0 0 45%;
-    max-width: 45%;
+    flex: 0 0 auto;
     display: flex;
-    justify-content: center; /* Center horizontally in the 40% area */
-    align-items: center; /* Center vertically if needed */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .avatar {

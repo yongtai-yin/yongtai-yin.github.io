@@ -144,7 +144,8 @@ a:hover {
 
 /* Left side text group */
 .header-text {
-    flex: 1; /* Take remaining space */
+    flex: 0 0 60%; /* Fixed 60% width */
+    max-width: 60%;
 }
 
 .header-name {
@@ -163,20 +164,22 @@ a:hover {
 }
 
 .header-email {
-    margin-top: 20px;
+    margin-top: 24px; /* Separated from bio to create 'Personal Info' block */
     font-size: 1.2em;
     color: var(--text-secondary);
 }
 
 .header-actions {
-    margin-top: 30px;
+    margin-top: 12px; /* Closer to email to create 'Contact Info' block */
 }
 
 /* Right side avatar group */
 .header-avatar-container {
-    flex-shrink: 0; /* Prevent shrinking */
-    width: auto; /* Let it grow with the image */
-    text-align: right;
+    flex: 0 0 40%;
+    max-width: 40%;
+    display: flex;
+    justify-content: center; /* Center horizontally in the 40% area */
+    align-items: center; /* Center vertically if needed */
 }
 
 .avatar {
@@ -498,10 +501,14 @@ footer {
 
     .header-text {
         width: 100%;
+        flex: auto;
+        max-width: 100%;
     }
 
     .header-avatar-container {
         width: 100%;
+        flex: auto;
+        max-width: 100%;
         text-align: center; /* Center the image */
         margin-bottom: 20px;
     }

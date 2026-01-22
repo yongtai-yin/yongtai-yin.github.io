@@ -137,7 +137,7 @@ a:hover {
     gap: 60px; /* Increased gap slightly */
     margin-top: 60px; 
     margin-bottom: 60px; 
-    max-width: 750px; /* Reduced from 900px to shorten whitespace */
+    max-width: 700px; /* Reduced from 900px to shorten whitespace */
     margin-left: auto; /* Center the header block itself */
     margin-right: auto;
 }
@@ -210,14 +210,14 @@ a:hover {
 
 .main-content {
     min-width: 0;
-    max-width: 900px; /* SAME WIDTH AS HEADER to ensure alignment */
+    max-width: 800px; /* SAME WIDTH AS HEADER to ensure alignment */
     margin: 0 auto;
     padding: 0; /* Remove side padding that might cause misalignment */
 }
 
 /* Modifiers for specific pages if needed, but 800px is a good default for "modern standard" main text */
 .main-content.single-column {
-    max-width: 900px; /* Slightly wider for lists/tables */
+    max-width: 850px; /* Slightly wider for lists/tables */
 }
 
 /* Ensure long-form text within single-column pages is still readable */

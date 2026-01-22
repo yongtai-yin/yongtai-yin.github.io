@@ -4,7 +4,7 @@ layout_type: home
 title: Yongtai Yin
 header_name: Yongtai Yin
 avatar: /assets/img/avatar.jpg
-bio:
+bio: |
   Ph.D. Student, Electronic Engineering
   The Chinese University of Hong Kong
 email: ytyin [at] link.cuhk.edu.hk

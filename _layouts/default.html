@@ -41,7 +41,7 @@
             <div class="home-layout">
                 <header class="home-header">
                     <div class="header-text">
-                        <h1 class="header-name">{{ page.name }}</h1>
+                        <h1 class="header-name">{{ page.name | default: page.title }}</h1>
                         <div class="header-bio">{{ page.bio_role }}</div>
                         <div class="header-bio">{{ page.bio_school }}</div>
                         <div class="header-email">{{ page.email }}</div>

@@ -133,10 +133,13 @@ a:hover {
 .home-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px; /* Space between text and avatar */
-    margin-top: 80px; /* Top spacing */
-    margin-bottom: 80px; /* Spacing between header and content */
+    align-items: center; /* Vertically align center as requested */
+    gap: 40px; /* Reduced gap to bring them closer in narrower container */
+    margin-top: 60px; 
+    margin-bottom: 60px; 
+    max-width: 800px; /* Match body width */
+    margin-left: auto; /* Center the header block itself */
+    margin-right: auto;
 }
 
 /* Left side text group */
@@ -206,8 +209,9 @@ a:hover {
 
 .main-content {
     min-width: 0;
-    max-width: 800px; /* Constrain reading width for single column centered */
-    margin: 0 auto; /* Center alignment */
+    max-width: 800px; /* SAME WIDTH AS HEADER to ensure alignment */
+    margin: 0 auto;
+    padding: 0; /* Remove side padding that might cause misalignment */
 }
 
 /* Modifiers for specific pages if needed, but 800px is a good default for "modern standard" main text */

@@ -1,26 +1,56 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root {
-    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    --link-color: #0066cc;
-    --text-color: #333;
-    --bg-color: #fff;
-    --gray-color: #828282;
-    --border-color: #e8e8e8;
-    --nav-height: 60px; /* Define navbar height variable */
+    /* Default Light Mode (Paper & Ink) */
+    --bg-primary: #F9F9F8;
+    --bg-card: #FFFFFF;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-color: #2563EB;
+    --border-color: #E5E5E5;
+    
+    /* Derived variables */
+    --nav-bg: rgba(249, 249, 248, 0.95);
+    --code-bg: #f3f4f6;
+    --nav-height: 60px;
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.05); /* Softer shadow */
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+[data-theme='dark'] {
+    /* Dark Mode (Deep Dark) */
+    --bg-primary: #111827;
+    --bg-card: #1F2937;
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --accent-color: #818CF8;
+    --border-color: #374151;
+    
+    /* Derived variables */
+    --nav-bg: rgba(17, 24, 39, 0.95);
+    --code-bg: #374151;
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 body {
     font-family: var(--font-main);
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    font-size: 18px; /* Increased font size for better readability */
+    line-height: 1.7; /* Requested 1.6-1.7 */
+    font-size: 16px; /* Standard readable size */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
-    color: var(--link-color);
+    color: var(--accent-color);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 a:hover {
@@ -28,7 +58,7 @@ a:hover {
 }
 
 .container {
-    max-width: 1100px; /* Increased from 960px for a more modern, wider look */
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -39,11 +69,12 @@ a:hover {
     height: var(--nav-height);
     display: flex;
     align-items: center;
-    position: sticky; /* Keep navbar fixed at the top */
+    position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--nav-bg);
     z-index: 1000;
     backdrop-filter: blur(5px);
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-wrapper {
@@ -54,106 +85,142 @@ a:hover {
 }
 
 .nav-brand {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.2em;
-    color: #000;
+    color: var(--text-primary);
     text-decoration: none;
 }
 
 .nav-links {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .nav-links a {
-    color: var(--gray-color);
+    color: var(--text-secondary);
     text-decoration: none;
+    font-weight: 600;
     font-size: 0.95em;
     transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    color: var(--link-color);
+    color: var(--accent-color);
 }
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    color: var(--accent-color);
+}
+
 
 /* --- Homepage Layout (Sidebar + Content) --- */
 .profile-layout {
     display: flex; 
-    gap: 60px; /* Gap between sidebar and main content */
-    margin-top: 40px;
-    margin-bottom: 60px;
-    align-items: flex-start; /* Crucial: Align start allows sticky positioning to work */
+    gap: 60px;
+    margin-top: 60px; /* Increased top margin for breathing room */
+    margin-bottom: 80px;
+    align-items: flex-start;
 }
 
 /* --- Left Sidebar --- */
 .profile-sidebar {
-    width: 280px; /* Slightly wider */
-    flex-shrink: 0; /* Prevent shrinking */
-    
-    /* === Desktop Core: Sticky Sidebar === */
+    width: 280px;
+    flex-shrink: 0;
     position: -webkit-sticky;
     position: sticky;
-    /* Top offset = Navbar height + extra padding */
     top: calc(var(--nav-height) + 40px); 
 }
 
 .avatar {
-    width: 180px; /* Adjusted size for better proportion */
+    width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-md);
+    border: 3px solid var(--bg-card); /* Optional: add border to make it pop on custom bg */
 }
 
 .profile-name {
-    font-size: 1.6em; /* Adjusted proportion */
+    font-size: 1.8em; /* Bold H1 style for name */
     font-weight: 700;
-    margin-bottom: 5px;
-    color: #000;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    line-height: 1.2;
 }
 
 .profile-bio {
-    font-size: 0.95em; /* Adjusted proportion */
-    color: #555;
-    margin-bottom: 4px; /* Increased spacing */
+    font-size: 1em;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
 }
 
 .profile-contact {
-    margin-top: 25px;
-    font-size: 0.95em; /* Adjusted proportion */
+    margin-top: 30px;
+    font-size: 0.95em;
     line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.profile-contact a {
+    color: var(--accent-color);
 }
 
 .social-links {
     display: flex;
     gap: 16px;
-    font-size: 1.8em; /* Adjusted proportion */
-    margin-top: 15px;
+    font-size: 1.5em; /* Slightly smaller cleaner icons */
+    margin-top: 20px;
 }
 
-.profile-contact a {
-    color: var(--link-color);
-    text-decoration: none;
+.social-links a {
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
 }
 
 /* --- Right Main Content --- */
 .main-content {
     flex-grow: 1;
-    min-width: 0; /* Prevent content overflow issues */
+    min-width: 0;
+    max-width: 65ch; /* Limit reading width as requested */
 }
 
 .main-content h2 {
-    font-size: 1.4em; /* Adjusted proportion */
+    font-size: 1.5em; /* SemiBold/Bold */
+    font-weight: 600;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
-    margin-top: 50px; /* Spacing between sections */
-    margin-bottom: 30px;
-    color: #000;
+    padding-bottom: 12px;
+    margin-top: 60px; /* More breathing room */
+    margin-bottom: 35px;
+    color: var(--text-primary);
 }
 
 .main-content h2:first-child {
     margin-top: 0;
+}
+
+.main-content p {
+    margin-bottom: 1.5em;
+    color: var(--text-primary);
 }
 
 /* News Table Styling */
@@ -163,140 +230,135 @@ a:hover {
 }
 
 .news-date {
-    width: 15%;       /* Reduced from 18% */
-    min-width: 100px; /* Prevent date wrapping */
+    width: 15%; 
+    min-width: 100px;
     vertical-align: top;
-    font-weight: bold;
-    color: #444;
-    padding-bottom: 20px; /* Increased slightly for better separation */
-    /* font-size: 0.9em; Removed to make font size consistent with content */
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding-bottom: 24px;
+    font-size: 0.95em;
 }
 
 .news-text {
-    padding-bottom: 20px; /* Match spacing */
+    padding-bottom: 24px;
+    color: var(--text-primary);
 }
 
 .news-text p {
     margin: 0;
 }
 
-/* Styled code blocks for inline highlighting in news */
 code {
-    background-color: #f3f4f6; /* Slightly more visible gray */
+    background-color: var(--code-bg);
     border-radius: 4px;
     padding: 0.2em 0.4em;
-    font-family: inherit; /* Use the same font as the surrounding text */
-    font-size: inherit;   /* Maintain the same font size */
-    color: #c7254e;       /* Markdown-like emphasis color (optional, remove if unwanted) */
+    font-family: inherit;
+    font-size: 0.9em;
+    color: var(--accent-color); /* Use accent color for code highlight */
     margin: 0 2px;
 }
-
 
 /* Publications List Styling */
 .pub-item {
     display: flex;
-    gap: 32px; /* Increased gap from 25px */
-    margin-bottom: 50px; /* Increased spacing between items */
-    align-items: flex-start; /* Ensure top alignment */
+    gap: 32px;
+    margin-bottom: 60px; /* More space between pubs */
+    align-items: flex-start;
 }
 
 .pub-img-col {
     flex-shrink: 0;
-    width: 170px; /* Reduced from 200px to make it more elegant */
+    width: 170px;
     max-width: 170px;
 }
 
 .pub-abbr {
-    display: block; /* Make it block to span width */
-    width: 100%;    /* Match the column width (and thus the image width) */
+    display: block;
+    width: 100%;
     text-align: center;
-    background-color: #00369f; /* Reverted to deeper blue based on 'AJP' reference which is dark blue */
-    color: #fff;
-    padding: 3px 0; /* Vertical padding */
-    font-size: 0.75em; /* Larger font */
-    font-weight: 700; /* Extra bold */
+    background-color: var(--accent-color); /* Use accent color */
+    color: #fff; /* Always white on accent */
+    padding: 4px 0;
+    font-size: 0.75em;
+    font-weight: 600;
     text-transform: uppercase;
-    border-radius: 6px; /* Soft rounded corners like reference */
-    margin-bottom: 10px; /* Increased space between badge and image */
-    box-sizing: border-box; /* Include padding in width */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    border-radius: 4px; /* Slightly squarer for 'modern' look */
+    margin-bottom: 12px;
+    box-shadow: var(--shadow-sm);
     letter-spacing: 0.5px;
 }
 
 .pub-img {
     width: 100%;
-    display: block; /* Remove inline gap */
-    border-radius: 6px; /* Softer radius matching the badge */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-    transition: transform 0.2s;
-    border: 1px solid #f0f0f0; /* Very subtle border */
+    display: block;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card); /* Ensure bg if transparent image */
 }
 
 .pub-img:hover {
-    transform: translateY(-2px); /* Subtle lift effect */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .pub-content-col {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: start; /* Align content to top */
-    padding-top: 2px; /* Slight offset to align text baseline with the badge/image top */
-}
-
-/* Responsive adjustment for pub-item */
-@media (max-width: 600px) {
-    .pub-item {
-        flex-direction: column;
-    }
-    
-    .pub-img-col {
-        width: 100%;
-        max-width: 300px; /* Limit width on mobile if desired */
-        margin-bottom: 10px;
-    }
+    justify-content: start;
+    padding-top: 0;
 }
 
 .pub-title {
-    font-weight: 700; /* Bolder */
-    color: #111; /* More stark black */
-    font-size: 1.1em; /* Larger title relative to badge */
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 1.15em;
     display: block;
     margin-bottom: 8px;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 .pub-authors {
-    color: #444;
-    font-size: 1.05em; /* Adjusted proportion */
-    margin-bottom: 6px;
+    color: var(--text-secondary); /* Slightly lighter than title */
+    font-size: 1em;
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
 
 .pub-venue {
     font-style: italic;
-    color: #666;
-    font-size: 0.95em; /* Adjusted proportion */
-    margin-bottom: 10px;
+    color: var(--text-secondary);
+    font-size: 0.95em;
+    margin-bottom: 16px;
+}
+
+.pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .pub-links a {
-    display: inline-block;
-    border: 1px solid var(--border-color); /* Subtle border like reference */
-    background-color: #f6f8fa; /* Light gray background like GitHub buttons or reference */
-    color: #24292e;
-    padding: 3px 12px;
-    border-radius: 6px; /* Softer radius, less capsule-like */
-    font-size: 0.85em; /* More readable buttons */
-    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* Icon spacing */
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card); /* White in Light, Dark in Dark */
+    color: var(--text-primary);
+    padding: 4px 14px;
+    border-radius: 100px; /* Pill shape */
+    font-size: 0.85em;
+    font-weight: 500;
     text-decoration: none;
     transition: all 0.2s;
 }
 
 .pub-links a:hover {
-    background-color: #e1e4e8;
-    border-color: #d1d5da;
-    color: #24292e; /* No color change on hover, just bg */
+    background-color: var(--bg-primary); /* Slight contrast on hover */
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 /* PDF Viewer Container */
@@ -312,8 +374,8 @@ footer {
     border-top: 1px solid var(--border-color);
     padding: 40px 0;
     text-align: center;
-    color: var(--gray-color);
-    font-size: 0.85em;
+    color: var(--text-secondary);
+    font-size: 0.9em;
     margin-top: 80px;
 }
 
@@ -344,6 +406,7 @@ footer {
     .avatar {
         width: 150px;
         height: 150px;
+        margin: 0 auto 20px;
     }
 
     /* Center Social Icons on Mobile */
@@ -367,5 +430,16 @@ footer {
     .main-content h2 {
         margin-top: 30px;
         font-size: 1.3em;
+    }
+
+    .pub-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .pub-img-col {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
     }
 }

@@ -20,10 +20,11 @@ permalink: /publications/
       <div class="pub-authors">{{ pub.authors }}</div>
       <div class="pub-venue">{{ pub.venue }}</div>
       <div class="pub-links">
-          {% if pub.pdf %} <a href="{{ pub.pdf }}">PDF</a> {% endif %}
-          {% if pub.code %} <a href="{{ pub.code }}">Code</a> {% endif %}
-          {% if pub.project %} <a href="{{ pub.project }}">Project</a> {% endif %}
-          {% if pub.bibtex %} <a href="{{ pub.bibtex }}">BibTeX</a> {% endif %}
+          {% if pub.pdf %} <a href="{{ pub.pdf }}"><i class="far fa-file-pdf"></i> PDF</a> {% endif %}
+          {% if pub.code %} <a href="{{ pub.code }}"><i class="fab fa-github"></i> Code</a> {% endif %}
+          {% if pub.project %} <a href="{{ pub.project }}"><i class="fas fa-globe"></i> Project</a> {% endif %}
+          {% if pub.bibtex %} <a href="{{ pub.bibtex }}"><i class="fas fa-quote-right"></i> BibTeX</a> {% endif %}
+          {% if pub.data %} <a href="{{ pub.data }}"><i class="fas fa-database"></i> Data</a> {% endif %}
       </div>
     </div>
   </div>

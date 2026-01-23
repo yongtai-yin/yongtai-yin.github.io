@@ -22,7 +22,7 @@ socials:
 
 ## About Me
 
-My name is YIN, Yongtai (殷永泰). I am currently a Ph.D. student at the [DSP & Speech Technology Laboratory](http://dsp.ee.cuhk.edu.hk) in the Department of Electronic Engineering at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk) (CUHK), under the supervision of [Prof. Wing-Kin Ma](https://scholar.google.com/citations?user=zSjjF_UAAAAJ&hl).
+Hello! My name is YIN, Yongtai (殷永泰). I am currently a Ph.D. student at the [DSP & Speech Technology Laboratory](http://dsp.ee.cuhk.edu.hk) in the Department of Electronic Engineering at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk) (CUHK), under the supervision of [Prof. Wing-Kin Ma](https://scholar.google.com/citations?user=zSjjF_UAAAAJ&hl).
 
 Prior to this, I obtained my B.Eng. and M.Eng. degrees in Communication Engineering from [Northwestern Polytechnical University](https://en.nwpu.edu.cn/) (NWPU) in 2021 and 2024, respectively.
 

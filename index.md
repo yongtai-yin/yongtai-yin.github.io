@@ -3,7 +3,7 @@ layout: default
 layout_type: home
 title: Yongtai Yin
 header_name: Yongtai Yin
-avatar: /assets/img/avatar.jpg
+avatar: /assets/img/avatar.png
 bio: |
   Ph.D. Student, Electronic Engineering<br>
   The Chinese University of Hong Kong

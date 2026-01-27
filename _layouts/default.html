@@ -42,7 +42,12 @@
     <nav class="navbar">
         <div class="container nav-wrapper">
             <a href="{{ '/' | relative_url }}" class="nav-brand">{{ site.title }}</a>
-            <div class="nav-links">
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="nav-links" id="nav-links">
                 {% for link in site.navigation %}
                 <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
                 {% endfor %}
@@ -113,6 +118,36 @@
                     links[i].target = '_blank';
                     links[i].rel = 'noopener noreferrer';
                 }
+            }
+
+            // Mobile Menu Toggle logic
+            const navToggle = document.getElementById('nav-toggle');
+            const navLinks = document.getElementById('nav-links');
+
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function(e) {
+                    navLinks.classList.toggle('active');
+                    
+                    // Switch icon
+                    const icon = navToggle.querySelector('i');
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navToggle.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = navToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
             }
         });
     </script>

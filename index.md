@@ -10,7 +10,7 @@ bio: |
 email: ytyin [at] link.cuhk.edu.hk
 socials:
   - name: Google Scholar
-    url: "#"
+    url: "https://scholar.google.com/citations?user=2-HlzyEAAAAJ&hl"
     icon: ai ai-google-scholar
   - name: GitHub
     url: "https://github.com/yongtai-yin"

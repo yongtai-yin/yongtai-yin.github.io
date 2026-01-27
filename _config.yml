@@ -11,3 +11,5 @@ navigation:
     url: /cv/
   - title: Publications
     url: /publications/
+  - title: Blog
+    url: /blog/

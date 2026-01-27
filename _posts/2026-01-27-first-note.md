@@ -2,6 +2,7 @@
 layout: post
 title: "First Note: Math Test"
 date: 2026-01-27
+tags: [math, physics]
 katex: true
 ---
 

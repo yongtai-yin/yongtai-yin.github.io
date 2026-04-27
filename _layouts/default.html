@@ -78,8 +78,21 @@
                 <header class="home-header">
                     <div class="header-text">
                         <h1 class="header-name">{{ page.header_name | default: page.title }}</h1>
+                        {% if page.position or page.affiliation %}
+                        <div class="header-profile">
+                            {% if page.position %}
+                            <div class="header-position">{{ page.position }}</div>
+                            {% endif %}
+                            {% if page.affiliation %}
+                            <div class="header-affiliation">{{ page.affiliation }}</div>
+                            {% endif %}
+                        </div>
+                        {% elsif page.bio %}
                         <div class="header-bio">{{ page.bio | markdownify }}</div>
+                        {% endif %}
+                        {% if page.email %}
                         <div class="header-email">{{ page.email }}</div>
+                        {% endif %}
                         
                         <div class="header-actions">
                             <!-- Social Icons -->

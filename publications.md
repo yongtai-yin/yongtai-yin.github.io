@@ -4,6 +4,10 @@ title: Publications
 permalink: /publications/
 ---
 
+<p class="page-intro">
+  A complete list of my publications is organized by year below. Selected works are highlighted on the homepage.
+</p>
+
 {% assign publication_years = site.data.publications | map: "year" | uniq %}
 
 {% for year in publication_years %}

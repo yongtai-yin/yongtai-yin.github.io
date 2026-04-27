@@ -4,9 +4,8 @@ layout_type: home
 title: Yongtai Yin
 header_name: Yongtai Yin
 avatar: /assets/img/avatar.png
-bio: |
-  Ph.D. Student, Electronic Engineering<br>
-  The Chinese University of Hong Kong
+position: Ph.D. Student in Electronic Engineering
+affiliation: The Chinese University of Hong Kong
 email: ytyin [at] link.cuhk.edu.hk
 socials:
   - name: Google Scholar
@@ -22,16 +21,15 @@ socials:
 
 ## About Me
 
-Hello! My name is YIN, Yongtai (殷永泰). I am currently a Ph.D. student at the [DSP & Speech Technology Laboratory](http://dsp.ee.cuhk.edu.hk) in the Department of Electronic Engineering at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk) (CUHK), under the supervision of [Prof. Wing-Kin Ma](https://www.ee.cuhk.edu.hk/~wkma/).
+I am a Ph.D. student in the Department of Electronic Engineering at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk) (CUHK), advised by [Prof. Wing-Kin Ma](https://www.ee.cuhk.edu.hk/~wkma/). I am a member of the [DSP & Speech Technology Laboratory](http://dsp.ee.cuhk.edu.hk).
 
-Prior to this, I obtained my B.Eng. and M.Eng. degrees in Communication Engineering from [Northwestern Polytechnical University](https://en.nwpu.edu.cn/) (NWPU) in 2021 and 2024, respectively.
+Before joining CUHK, I received my B.Eng. and M.Eng. degrees in Communication Engineering from [Northwestern Polytechnical University](https://en.nwpu.edu.cn/) (NWPU) in 2021 and 2024, respectively.
 
 ## Research Interests
 
-- Optimization for Signal Processing
-- Model-Based Deep Learning
-- Generative Models
-- Wireless Sensing
+- Optimization and nonconvex methods for signal processing
+- Model-based deep learning and generative modeling
+- Wireless sensing, localization, and array signal processing
 
 ## News
 
@@ -46,3 +44,7 @@ Prior to this, I obtained my B.Eng. and M.Eng. degrees in Communication Engineer
   {% endif %}
 {% endfor %}
 </div>
+
+<p class="section-more">
+  <a href="{{ '/publications/' | relative_url }}">View all publications</a>
+</p>

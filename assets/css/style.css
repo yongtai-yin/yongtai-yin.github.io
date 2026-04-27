@@ -205,9 +205,24 @@ a:hover {
     line-height: 1.5;
 }
 
+.header-profile {
+    color: var(--text-secondary);
+    font-size: 1.15em;
+    line-height: 1.5;
+}
+
+.header-position {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.header-affiliation {
+    margin-top: 2px;
+}
+
 .header-email {
-    margin-top: 24px;
-    font-size: 1.2em;
+    margin-top: 22px;
+    font-size: 1.05em;
     color: var(--text-secondary);
 }
 
@@ -288,6 +303,18 @@ a:hover {
 .main-content p {
     margin-bottom: 1.5em;
     color: var(--text-primary);
+}
+
+.page-intro {
+    color: var(--text-secondary);
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-more {
+    margin-top: -20px;
+    text-align: right;
+    font-weight: 600;
 }
 
 /* News */

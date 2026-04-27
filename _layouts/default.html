@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    {% assign page_description = page.description | default: site.description %}
+    <title>{% if page.title == site.title %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ page_description | strip_html | strip_newlines | escape }}">
+    <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+    <meta property="og:title" content="{% if page.title == site.title %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}">
+    <meta property="og:description" content="{{ page_description | strip_html | strip_newlines | escape }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
     <link rel="icon" type="image/jpeg" href="{{ '/assets/img/avatar.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -43,15 +51,19 @@
         <div class="container nav-wrapper">
             <a href="{{ '/' | relative_url }}" class="nav-brand">{{ site.title }}</a>
             
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle Navigation" aria-controls="nav-links" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
 
             <div class="nav-links" id="nav-links">
                 {% for link in site.navigation %}
-                <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+                {% assign is_active = false %}
+                {% if page.url == link.url %}
+                    {% assign is_active = true %}
+                {% endif %}
+                <a href="{{ link.url | relative_url }}"{% if is_active %} class="active" aria-current="page"{% endif %}>{{ link.title }}</a>
                 {% endfor %}
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
@@ -71,22 +83,12 @@
                         
                         <div class="header-actions">
                             <!-- Social Icons -->
-                            <div class="social-links">
-                                {% for social in page.socials %}
-                                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" title="{{ social.name }}">
-                                    {% if social.icon %}
-                                        <i class="{{ social.icon }}"></i>
-                                    {% else %}
-                                        {{ social.name }}
-                                    {% endif %}
-                                </a>
-                                {% endfor %}
-                            </div>
+                            {% include social-links.html socials=page.socials %}
                         </div>
                     </div>
                     
                     <div class="header-avatar-container">
-                        <img src="{{ page.avatar | relative_url }}" alt="{{ page.name }}" class="avatar">
+                        <img src="{{ page.avatar | relative_url }}" alt="{{ page.header_name | default: page.title }}" class="avatar">
                     </div>
                 </header>
 
@@ -112,11 +114,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var links = document.getElementsByTagName('a');
-            for (var i = 0; i < links.length; i++) {
-                if (links[i].hostname !== window.location.hostname || links[i].href.endsWith('.pdf')) {
-                    links[i].target = '_blank';
-                    links[i].rel = 'noopener noreferrer';
+            const links = document.getElementsByTagName('a');
+            for (let i = 0; i < links.length; i++) {
+                const link = links[i];
+                const href = link.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('mailto:')) {
+                    continue;
+                }
+
+                const isExternal = link.hostname && link.hostname !== window.location.hostname;
+                const isPdf = link.pathname.toLowerCase().endsWith('.pdf');
+                if (isExternal || isPdf) {
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
                 }
             }
 
@@ -127,10 +137,12 @@
             if (navToggle && navLinks) {
                 navToggle.addEventListener('click', function(e) {
                     navLinks.classList.toggle('active');
+                    const isOpen = navLinks.classList.contains('active');
+                    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
                     
                     // Switch icon
                     const icon = navToggle.querySelector('i');
-                    if (navLinks.classList.contains('active')) {
+                    if (isOpen) {
                         icon.classList.remove('fa-bars');
                         icon.classList.add('fa-times');
                     } else {
@@ -143,6 +155,7 @@
                 document.addEventListener('click', function(e) {
                     if (!navToggle.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
                         const icon = navToggle.querySelector('i');
                         icon.classList.remove('fa-times');
                         icon.classList.add('fa-bars');
@@ -152,6 +165,9 @@
         });
     </script>
     <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+    {% if page.blog_filter %}
+    <script src="{{ '/assets/js/blog-filter.js' | relative_url }}"></script>
+    {% endif %}
 
 </body>
 </html>

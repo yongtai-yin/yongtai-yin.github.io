@@ -1,0 +1,8 @@
+<table class="news-table">
+{% for news in site.data.news %}
+  <tr>
+    <td class="news-date">{{ news.date }}</td>
+    <td class="news-text">{{ news.content | markdownify }}</td>
+  </tr>
+{% endfor %}
+</table>

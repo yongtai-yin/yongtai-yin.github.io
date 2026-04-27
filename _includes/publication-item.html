@@ -1,0 +1,22 @@
+<div class="pub-item">
+  <div class="pub-img-col">
+    {% if include.pub.short_venue %}
+    <span class="pub-abbr">{{ include.pub.short_venue }}</span>
+    {% endif %}
+    {% if include.pub.image %}
+    <img src="{{ include.pub.image | relative_url }}" class="pub-img" alt="{{ include.pub.title }}">
+    {% endif %}
+  </div>
+  <div class="pub-content-col">
+    <span class="pub-title">{{ include.pub.title }}</span>
+    <div class="pub-authors">{{ include.pub.authors }}</div>
+    <div class="pub-venue">{{ include.pub.venue }}</div>
+    <div class="pub-links">
+      {% if include.pub.pdf %} <a href="{{ include.pub.pdf }}"><i class="far fa-file-pdf"></i> PDF</a> {% endif %}
+      {% if include.pub.code %} <a href="{{ include.pub.code }}"><i class="fab fa-github"></i> Code</a> {% endif %}
+      {% if include.pub.project %} <a href="{{ include.pub.project }}"><i class="fas fa-globe"></i> Project</a> {% endif %}
+      {% if include.pub.bibtex %} <a href="{{ include.pub.bibtex }}"><i class="fas fa-quote-right"></i> BibTeX</a> {% endif %}
+      {% if include.pub.data %} <a href="{{ include.pub.data }}"><i class="fas fa-database"></i> Data</a> {% endif %}
+    </div>
+  </div>
+</div>

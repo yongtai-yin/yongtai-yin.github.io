@@ -1,0 +1,13 @@
+{% if include.socials %}
+<div class="social-links">
+  {% for social in include.socials %}
+  <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" title="{{ social.name }}" aria-label="{{ social.name }}">
+    {% if social.icon %}
+      <i class="{{ social.icon }}" aria-hidden="true"></i>
+    {% else %}
+      {{ social.name }}
+    {% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

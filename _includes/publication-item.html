@@ -1,22 +1,74 @@
 <div class="pub-item">
+  {% assign pub_pdf = include.pub.links.pdf | default: include.pub.pdf %}
+  {% assign pub_code = include.pub.links.code | default: include.pub.code %}
+  {% assign pub_project = include.pub.links.project | default: include.pub.project %}
+  {% assign pub_bibtex = include.pub.links.bibtex | default: include.pub.bibtex %}
+  {% assign pub_data = include.pub.links.data | default: include.pub.data %}
+  {% assign pub_doi = include.pub.links.doi | default: include.pub.doi %}
+  {% assign pub_arxiv = include.pub.links.arxiv | default: include.pub.arxiv %}
+  {% assign pub_status = include.pub.status | default: '' %}
+  {% assign pub_status_label = '' %}
+  {% assign pub_type_label = include.pub.type | default: 'publication' | replace: '_', ' ' | capitalize %}
+  {% case pub_status %}
+    {% when 'accepted' %}
+      {% assign pub_status_label = 'Accepted' %}
+    {% when 'preprint' %}
+      {% assign pub_status_label = 'Preprint' %}
+    {% when 'under_review' %}
+      {% assign pub_status_label = 'Under review' %}
+    {% when 'in_press' %}
+      {% assign pub_status_label = 'In press' %}
+  {% endcase %}
   <div class="pub-img-col">
     {% if include.pub.short_venue %}
     <span class="pub-abbr">{{ include.pub.short_venue }}</span>
     {% endif %}
     {% if include.pub.image %}
     <img src="{{ include.pub.image | relative_url }}" class="pub-img" alt="{{ include.pub.title }}">
+    {% else %}
+    <div class="pub-img pub-img-placeholder" aria-hidden="true">
+      {% if include.pub.year %}
+      <span class="pub-placeholder-year">{{ include.pub.year }}</span>
+      {% endif %}
+      <span class="pub-placeholder-type">{{ pub_type_label }}</span>
+    </div>
     {% endif %}
   </div>
   <div class="pub-content-col">
     <span class="pub-title">{{ include.pub.title }}</span>
-    <div class="pub-authors">{{ include.pub.authors }}</div>
-    <div class="pub-venue">{{ include.pub.venue }}</div>
+    <div class="pub-authors">
+      {% for author in include.pub.authors %}
+        {% if author.self %}<strong>{{ author.name }}</strong>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+    <div class="pub-venue">
+      {{ include.pub.venue }}
+      {% if pub_status_label %}
+      <span class="pub-status">{{ pub_status_label }}</span>
+      {% endif %}
+    </div>
     <div class="pub-links">
-      {% if include.pub.pdf %} <a href="{{ include.pub.pdf }}"><i class="far fa-file-pdf"></i> PDF</a> {% endif %}
-      {% if include.pub.code %} <a href="{{ include.pub.code }}"><i class="fab fa-github"></i> Code</a> {% endif %}
-      {% if include.pub.project %} <a href="{{ include.pub.project }}"><i class="fas fa-globe"></i> Project</a> {% endif %}
-      {% if include.pub.bibtex %} <a href="{{ include.pub.bibtex }}"><i class="fas fa-quote-right"></i> BibTeX</a> {% endif %}
-      {% if include.pub.data %} <a href="{{ include.pub.data }}"><i class="fas fa-database"></i> Data</a> {% endif %}
+      {% if pub_pdf %} <a href="{{ pub_pdf }}"><i class="far fa-file-pdf"></i> PDF</a> {% endif %}
+      {% if pub_code %} <a href="{{ pub_code }}"><i class="fab fa-github"></i> Code</a> {% endif %}
+      {% if pub_project %} <a href="{{ pub_project }}"><i class="fas fa-globe"></i> Project</a> {% endif %}
+      {% if pub_doi %}
+        {% if pub_doi contains '://' %}
+          {% assign pub_doi_url = pub_doi %}
+        {% else %}
+          {% assign pub_doi_url = 'https://doi.org/' | append: pub_doi %}
+        {% endif %}
+        <a href="{{ pub_doi_url }}"><i class="fas fa-link"></i> DOI</a>
+      {% endif %}
+      {% if pub_arxiv %}
+        {% if pub_arxiv contains '://' %}
+          {% assign pub_arxiv_url = pub_arxiv %}
+        {% else %}
+          {% assign pub_arxiv_url = 'https://arxiv.org/abs/' | append: pub_arxiv %}
+        {% endif %}
+        <a href="{{ pub_arxiv_url }}"><i class="ai ai-arxiv"></i> arXiv</a>
+      {% endif %}
+      {% if pub_bibtex %} <a href="{{ pub_bibtex }}"><i class="fas fa-quote-right"></i> BibTeX</a> {% endif %}
+      {% if pub_data %} <a href="{{ pub_data }}"><i class="fas fa-database"></i> Data</a> {% endif %}
     </div>
   </div>
 </div>

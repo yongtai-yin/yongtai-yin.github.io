@@ -8,7 +8,6 @@
   {% assign pub_arxiv = include.pub.links.arxiv | default: include.pub.arxiv %}
   {% assign pub_status = include.pub.status | default: '' %}
   {% assign pub_status_label = '' %}
-  {% assign pub_type_label = include.pub.type | default: 'publication' | replace: '_', ' ' | capitalize %}
   {% case pub_status %}
     {% when 'accepted' %}
       {% assign pub_status_label = 'Accepted' %}
@@ -25,13 +24,6 @@
     {% endif %}
     {% if include.pub.image %}
     <img src="{{ include.pub.image | relative_url }}" class="pub-img" alt="{{ include.pub.title }}">
-    {% else %}
-    <div class="pub-img pub-img-placeholder" aria-hidden="true">
-      {% if include.pub.year %}
-      <span class="pub-placeholder-year">{{ include.pub.year }}</span>
-      {% endif %}
-      <span class="pub-placeholder-type">{{ pub_type_label }}</span>
-    </div>
     {% endif %}
   </div>
   <div class="pub-content-col">

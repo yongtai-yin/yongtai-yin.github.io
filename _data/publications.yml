@@ -10,7 +10,8 @@
   type: conference
   status: published
   selected: true
-  links: https://ieeexplore.ieee.org/abstract/document/11464294
+  links:
+    doi: "10.1109/ICASSP55912.2026.11464294"
 
 - title: "DOA Estimation Based on Smoothed Sparse Reconstruction with Time-Modulated Linear Arrays"
   authors:
@@ -25,7 +26,8 @@
   type: journal
   status: published
   selected: true
-  links: https://www.sciencedirect.com/science/article/pii/S0165168423003031
+  links:
+    doi: "10.1016/j.sigpro.2023.109229"
 
 - title: "Joint Multipath Channel Estimation and Array Channel Inconsistency Calibration for Massive MIMO Systems"
   authors:
@@ -43,7 +45,8 @@
   status: published
   image: "/assets/img/2024-IOTJ.png"
   selected: true
-  links: https://ieeexplore.ieee.org/abstract/document/10558849
+  links:
+    doi: "10.1109/JIOT.2024.3377437"
 
 - title: "Robust Sparse Direct Localization of Smart Vehicle  With Partly Calibrated Time Modulated Arrays"
   authors:
@@ -61,7 +64,8 @@
   status: published
   image: "/assets/img/2023-TITS.png"
   selected: false
-  links: https://ieeexplore.ieee.org/abstract/document/10210349
+  links:
+    doi: "10.1109/TITS.2023.3297248"
 
 - title: "Biquaternion-Based DOA Estimation of Noncircular Signals with Time-Modulated Antenna Arrays"
   authors:
@@ -77,4 +81,5 @@
   type: journal
   status: published
   selected: false
-  links: https://www.sciencedirect.com/science/article/pii/S1434841122003363
+  links:
+    doi: "10.1016/j.aeue.2022.154466"

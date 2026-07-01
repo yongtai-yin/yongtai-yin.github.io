@@ -1,0 +1,41 @@
+{{- $href := .value | default "" -}}
+{{- $base := .base | default "" -}}
+{{- $isExternal := or
+  (strings.HasPrefix $href "http://")
+  (strings.HasPrefix $href "https://")
+  (strings.HasPrefix $href "mailto:")
+  (strings.HasPrefix $href "tel:")
+  (strings.HasPrefix $href "#")
+  (strings.HasPrefix $href "//")
+-}}
+
+{{- if and $href (not $isExternal) -}}
+  {{- $basePath := replaceRE "^https?://[^/]+(/.*)$" "$1" site.BaseURL -}}
+  {{- if not (strings.HasPrefix $basePath "/") -}}
+    {{- $basePath = site.Home.RelPermalink -}}
+  {{- end -}}
+  {{- if and $basePath (ne $basePath "/") (strings.HasPrefix $href $basePath) -}}
+    {{- $href = strings.TrimPrefix $basePath $href -}}
+    {{- if eq $href "" -}}
+      {{- $href = "/" -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if eq $href "/" -}}
+    {{- $href = "" | relURL -}}
+  {{- else -}}
+    {{- $href = strings.TrimPrefix "/" $href -}}
+    {{- $href = strings.TrimPrefix "static/" $href -}}
+    {{- if and $base (not (or
+      (strings.HasPrefix $href $base)
+      (strings.HasPrefix $href "pdf/")
+      (strings.HasPrefix $href "img/")
+      (strings.HasPrefix $href "images/")
+    )) -}}
+      {{- $href = printf "%s%s" $base $href -}}
+    {{- end -}}
+    {{- $href = replace $href " " "%20" | relURL -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $href -}}

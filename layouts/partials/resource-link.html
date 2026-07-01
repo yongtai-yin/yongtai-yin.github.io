@@ -1,0 +1,10 @@
+{{- $value := .value | default "" -}}
+{{- $base := .base | default "" -}}
+{{- $href := partial "resource-href.html" (dict "value" $value "base" $base) -}}
+{{- if $href -}}
+  {{- $label := .label | default $href -}}
+  {{- $class := .class | default "" -}}
+  {{- $target := .target | default "_blank" -}}
+  {{- $rel := .rel | default "noopener" -}}
+  <a{{ with $class }} class="{{ . }}"{{ end }} href="{{ $href | safeURL }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $rel }} rel="{{ . }}"{{ end }}>{{ $label }}</a>
+{{- end -}}

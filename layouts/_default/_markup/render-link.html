@@ -1,0 +1,2 @@
+{{- $href := partial "resource-href.html" (dict "value" .Destination) -}}
+<a href="{{ $href | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>

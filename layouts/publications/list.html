@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ $publications := hugo.Data.publications }}
+
+  <article class="section-page section-page--publications">
+    {{ partial "page-header.html" . }}
+
+    {{ partial "page-content.html" . }}
+
+    {{ if gt (len $publications) 0 }}
+      {{ partial "publication-year-groups.html" (dict "items" $publications) }}
+    {{ else }}
+      <p class="empty-state">No publications have been added yet.</p>
+    {{ end }}
+  </article>
+{{ end }}

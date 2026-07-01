@@ -1,0 +1,7 @@
+{{ $page := . }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}
+    <div class="page-description markdown-content">{{ $page.RenderString . }}</div>
+  {{ end }}
+</header>

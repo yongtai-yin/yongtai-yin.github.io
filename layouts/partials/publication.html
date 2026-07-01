@@ -1,0 +1,66 @@
+<li class="publication-item" id="pub-{{ .key | anchorize }}">
+  {{ $links := .links | default (dict) }}
+  {{ $doi := index $links "doi" }}
+  {{ $doiHref := partial "resource-href.html" (dict "value" $doi) }}
+  {{ $url := index $links "url" }}
+  {{ $urlHref := partial "resource-href.html" (dict "value" $url) }}
+  {{ $highlightAuthors := hugo.Data.profile.publicationAuthorNames | default (slice) }}
+  {{ $descriptions := slice }}
+  {{ with .award }}{{ $descriptions = $descriptions | append . }}{{ end }}
+  {{ with .highlight }}{{ $descriptions = $descriptions | append . }}{{ end }}
+  {{ with .note }}{{ $descriptions = $descriptions | append . }}{{ end }}
+
+  <p class="publication-title">
+    {{ if $urlHref }}<a href="{{ $urlHref }}" target="_blank" rel="noopener">{{ end }}
+    {{ with .title }}{{ . }}{{ else }}Untitled publication{{ end }}
+    {{ if $urlHref }}</a>{{ end }}
+  </p>
+
+  {{ with .authors }}
+    <p class="publication-authors">
+      {{ range $index, $author := . }}
+        {{ if gt $index 0 }}, {{ end }}
+        {{ if in $highlightAuthors $author }}
+          <strong>{{ $author }}</strong>
+        {{ else }}
+          {{ $author }}
+        {{ end }}
+      {{ end }}
+    </p>
+  {{ end }}
+
+  {{ if or .venue .month .year $links }}
+    <p class="publication-meta">
+      {{ with .venue }}<span>{{ . }}</span>{{ end }}
+      {{ if or .month .year }}
+        <span>{{ if .venue }} · {{ end }}{{ with .month }}{{ . }} {{ end }}{{ with .year }}{{ . }}{{ end }}</span>
+      {{ end }}
+
+      {{ if $doiHref }}
+        {{ partial "resource-link.html" (dict "value" $doi "label" "[DOI]") }}
+      {{ end }}
+      {{ with index $links "pdf" }}
+        {{ partial "resource-link.html" (dict "value" . "label" "[PDF]") }}
+      {{ end }}
+      {{ with index $links "arxiv" }}
+        {{ partial "resource-link.html" (dict "value" . "label" "[arXiv]") }}
+      {{ end }}
+      {{ with index $links "code" }}
+        {{ partial "resource-link.html" (dict "value" . "label" "[code]") }}
+      {{ end }}
+      {{ with index $links "project" }}
+        {{ partial "resource-link.html" (dict "value" . "label" "[project]") }}
+      {{ end }}
+      {{ with index $links "slides" }}
+        {{ partial "resource-link.html" (dict "value" . "label" "[slides]") }}
+      {{ end }}
+      {{ with index $links "poster" }}
+        {{ partial "resource-link.html" (dict "value" . "label" "[poster]") }}
+      {{ end }}
+    </p>
+  {{ end }}
+
+  {{ if gt (len $descriptions) 0 }}
+    <p class="publication-note">{{ delimit $descriptions "; " }}</p>
+  {{ end }}
+</li>

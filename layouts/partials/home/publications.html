@@ -1,0 +1,18 @@
+{{ $selectedPublications := first 5 (where hugo.Data.publications "selected" true) }}
+
+<section class="home-section" aria-labelledby="home-publications-heading">
+  <div class="home-section__header">
+    <h2 id="home-publications-heading">Selected Publications</h2>
+    <a href="{{ relURL "publications/" }}">All publications</a>
+  </div>
+
+  {{ if gt (len $selectedPublications) 0 }}
+    <ul class="publication-list publication-list--compact">
+      {{ range $selectedPublications }}
+        {{ partial "publication.html" . }}
+      {{ end }}
+    </ul>
+  {{ else }}
+    <p class="empty-state">No selected publications have been added yet.</p>
+  {{ end }}
+</section>

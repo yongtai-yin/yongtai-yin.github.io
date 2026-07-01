@@ -1,0 +1,49 @@
+{{- $section := . -}}
+{{- $pages := $section.RegularPagesRecursive -}}
+{{- if gt (len $pages) 0 -}}
+  {{- $groups := dict -}}
+  {{- $groupNames := slice -}}
+
+  {{- range $pages -}}
+    {{- if not (.Params.hideFromLists | default false) -}}
+      {{- $groupName := .Params.class | default "" -}}
+
+      {{- if not $groupName -}}
+        {{- $sectionDir := printf "%s/" $section.Section -}}
+        {{- $relativeDir := .File.Dir | strings.TrimPrefix $sectionDir | strings.TrimSuffix "/" -}}
+        {{- if $relativeDir -}}
+          {{- $folder := index (split $relativeDir "/") 0 -}}
+          {{- $groupName = $folder | humanize | title -}}
+        {{- else -}}
+          {{- $groupName = "Pages" -}}
+        {{- end -}}
+      {{- end -}}
+
+      {{- if not (isset $groups $groupName) -}}
+        {{- $groupNames = $groupNames | append $groupName -}}
+      {{- end -}}
+
+      {{- $items := index $groups $groupName | default (slice) -}}
+      {{- $groups = merge $groups (dict $groupName ($items | append .)) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if gt (len $groupNames) 0 -}}
+    <div class="child-page-groups">
+      {{- range $groupNames }}
+        {{- $groupName := . -}}
+        {{- $items := index $groups $groupName -}}
+        <section class="child-page-group" aria-labelledby="{{ printf "%s-%s" $section.Section $groupName | anchorize }}">
+          <h2 class="child-page-group__title" id="{{ printf "%s-%s" $section.Section $groupName | anchorize }}">{{ $groupName }}</h2>
+          <ul class="child-page-group__list">
+            {{- range sort $items "Title" "asc" }}
+              <li class="child-page-group__item">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </li>
+            {{- end }}
+          </ul>
+        </section>
+      {{- end }}
+    </div>
+  {{- end -}}
+{{- end -}}

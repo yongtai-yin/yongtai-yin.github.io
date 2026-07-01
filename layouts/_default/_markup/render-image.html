@@ -1,0 +1,19 @@
+{{- $src := partial "resource-href.html" (dict "value" .Destination) -}}
+{{- $titleParts := slice -}}
+{{- $width := "" -}}
+{{- range split .Title " " -}}
+  {{- if strings.HasPrefix . "width=" -}}
+    {{- $rawWidth := strings.TrimPrefix "width=" . -}}
+    {{- if gt (len (findRE "^[1-9][0-9]{0,3}(%|px)?$" $rawWidth)) 0 -}}
+      {{- if gt (len (findRE "(%|px)$" $rawWidth)) 0 -}}
+        {{- $width = $rawWidth -}}
+      {{- else -}}
+        {{- $width = printf "%spx" $rawWidth -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else if . -}}
+    {{- $titleParts = $titleParts | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $title := delimit $titleParts " " -}}
+<img src="{{ $src | safeURL }}" alt="{{ .PlainText }}"{{ with $title }} title="{{ . }}"{{ end }}{{ with $width }} style="width: {{ . | safeCSS }};"{{ end }}>

@@ -1,0 +1,23 @@
+{{ $items := .items }}
+{{ $currentYear := "" }}
+
+{{ range $items }}
+  {{ $year := printf "%v" (default "Undated" .year) }}
+  {{ if ne $year $currentYear }}
+    {{ if ne $currentYear "" }}
+        </ul>
+      </section>
+    {{ end }}
+    <section class="year-group" aria-label="{{ $year }} publications">
+      <h3 class="year-heading">{{ $year }}</h3>
+      <ul class="publication-list">
+    {{ $currentYear = $year }}
+  {{ end }}
+
+  {{ partial "publication.html" . }}
+{{ end }}
+
+{{ if ne $currentYear "" }}
+    </ul>
+  </section>
+{{ end }}

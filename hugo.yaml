@@ -1,0 +1,84 @@
+baseURL: "https://yongtai-yin.github.io/"
+title: "Academic Homepage"
+locale: "en-us"
+defaultContentLanguage: "en"
+hasCJKLanguage: true
+enableRobotsTXT: true
+summaryLength: 30
+
+disableKinds:
+  - taxonomy
+  - term
+
+sitemap:
+  changeFreq: monthly
+  disable: false
+  filename: sitemap.xml
+  priority: 0.5
+
+pagination:
+  pagerSize: 20
+
+menus:
+  main:
+    - identifier: home
+      name: Home
+      pageRef: /
+      weight: 10
+    - identifier: research
+      name: Research
+      pageRef: /research
+      weight: 20
+    - identifier: publications
+      name: Publications
+      pageRef: /publications
+      weight: 30
+    - identifier: news
+      name: News
+      pageRef: /news
+      weight: 40
+    - identifier: misc
+      name: Misc
+      pageRef: /misc
+      weight: 50
+
+params:
+  math: true
+  dateFormat: "Jan 2006"
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ['\[', '\]']
+            - ['$$', '$$']
+          inline:
+            - ['\(', '\)']
+    renderer:
+      unsafe: false
+  highlight:
+    noClasses: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - WebAppManifest
+  section:
+    - HTML
+    - RSS
+
+mediaTypes:
+  application/manifest+json:
+    suffixes:
+      - webmanifest
+
+outputFormats:
+  WebAppManifest:
+    mediaType: application/manifest+json
+    baseName: site
+    isPlainText: true
+    notAlternative: true

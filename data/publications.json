@@ -1,0 +1,111 @@
+[
+  {
+    "key": "yin2026error",
+    "type": "inproceedings",
+    "title": "Error bound based exact penalization for cardinality-constrained clustering",
+    "authors": [
+      "Yongtai Yin",
+      "Junbin Liu",
+      "Wing-Kin Ma"
+    ],
+    "year": 2026,
+    "month": "May",
+    "monthNumber": 5,
+    "venue": "2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2026)",
+    "status": "published",
+    "selected": true,
+    "order": 999,
+    "links": {
+      "doi": "https://doi.org/10.1109/ICASSP55912.2026.11464294"
+    }
+  },
+  {
+    "key": "yin2024joint",
+    "type": "article",
+    "title": "Joint multipath channel estimation and array channel inconsistency calibration for massive MIMO systems",
+    "authors": [
+      "Yongtai Yin",
+      "Yuexian Wang",
+      "Yanyun Gong",
+      "Neeraj Kumar",
+      "Ling Wang",
+      "Joel J. P. C. Rodrigues"
+    ],
+    "year": 2024,
+    "month": "Dec",
+    "monthNumber": 12,
+    "venue": "IEEE Internet of Things Journal",
+    "status": "published",
+    "selected": false,
+    "order": 999,
+    "links": {
+      "doi": "https://doi.org/10.1109/JIOT.2024.3377437"
+    }
+  },
+  {
+    "key": "yin2024doa",
+    "type": "article",
+    "title": "DOA estimation based on smoothed sparse reconstruction with time-modulated linear arrays",
+    "authors": [
+      "Yongtai Yin",
+      "Yuexian Wang",
+      "Tiantian Dai",
+      "Ling Wang"
+    ],
+    "year": 2024,
+    "month": "Jan",
+    "monthNumber": 1,
+    "venue": "Signal Processing",
+    "status": "published",
+    "selected": true,
+    "order": 999,
+    "links": {
+      "doi": "https://doi.org/10.1016/j.sigpro.2023.109229"
+    }
+  },
+  {
+    "key": "wang2023robust",
+    "type": "article",
+    "title": "Robust sparse direct localization of smart vehicle with partly calibrated time modulated arrays",
+    "authors": [
+      "Yuexian Wang",
+      "Mohammad S. Obaidat",
+      "Yongtai Yin",
+      "Ling Wang",
+      "Joel J. P. C. Rodrigues",
+      "Balqies Sadoun"
+    ],
+    "year": 2023,
+    "month": "Nov",
+    "monthNumber": 11,
+    "venue": "IEEE Transactions on Intelligent Transportation Systems",
+    "status": "published",
+    "selected": false,
+    "order": 999,
+    "links": {
+      "doi": "https://doi.org/10.1109/TITS.2023.3297248"
+    }
+  },
+  {
+    "key": "yin2023biquaternionbased",
+    "type": "article",
+    "title": "Biquaternion-based DOA estimation of noncircular signals with time-modulated antenna arrays",
+    "authors": [
+      "Yongtai Yin",
+      "Yuexian Wang",
+      "Yanyun Gong",
+      "Zhaolin Zhang",
+      "Ling Wang"
+    ],
+    "year": 2023,
+    "month": "Feb",
+    "monthNumber": 2,
+    "venue": "AEU International Journal of Electronics and Communications",
+    "status": "published",
+    "selected": false,
+    "order": 999,
+    "links": {
+      "doi": "https://doi.org/10.1016/j.aeue.2022.154466"
+    }
+  }
+]

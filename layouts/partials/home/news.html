@@ -1,0 +1,18 @@
+{{ $news := first 3 (partial "news-items.html" .) }}
+
+<section class="home-section" aria-labelledby="home-news-heading">
+  <div class="home-section__header">
+    <h2 id="home-news-heading">Recent News</h2>
+    <a href="{{ relURL "news/" }}">All news</a>
+  </div>
+
+  {{ if gt (len $news) 0 }}
+    <ul class="news-list news-list--compact">
+      {{ range $news }}
+        {{ partial "news-item.html" (dict "item" . "showMedia" false) }}
+      {{ end }}
+    </ul>
+  {{ else }}
+    <p class="empty-state">No news items have been added yet.</p>
+  {{ end }}
+</section>

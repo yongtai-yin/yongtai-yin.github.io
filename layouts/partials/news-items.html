@@ -1,0 +1,14 @@
+{{- $items := slice -}}
+{{- range hugo.Data.news.items -}}
+  {{- $rawTime := or .time .date -}}
+  {{- if $rawTime -}}
+    {{- $date := partial "news-date.html" . -}}
+    {{- $items = $items | append (merge . (dict
+      "newsDisplayTime" $date.display
+      "newsDateTime" $date.datetime
+      "newsYear" $date.year
+      "newsSortTime" $date.sortTime
+    )) -}}
+  {{- end -}}
+{{- end -}}
+{{- return (sort $items "newsSortTime" "desc") -}}

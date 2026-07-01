@@ -1,0 +1,36 @@
+# Supported fields:
+# - time: month and year text, such as "Mar. 2016"
+# - text: Markdown text; inline links like [text](https://example.com) are supported
+# - image: one filename under static/img/news, kept for backward compatibility
+# - images: multiple filenames under static/img/news, or paths such as img/news/photo.jpg
+# - pdf/slides: local files under static/pdf/news, or paths such as pdf/papers/file.pdf
+# - arxiv/code: external links
+items:
+  - time: "Jul 2026"
+    text: "This academic homepage is being rebuilt with [Hugo](https://gohugo.io/)."
+    images: []
+    pdf: ""
+    arxiv: ""
+    code: ""
+    slides: ""
+
+  - time: "Jun 2026"
+    text: "Passed the Ph.D. proposal defence."
+
+  - time: "May 2026"
+    text: "Barcelona!"
+    images:
+      - "2026-ICASSP.jpg"
+      - "2026-Barcelona.jpg"
+
+  - time: "Jan 2026"
+    text: "One paper accepted to [ICASSP 2026](https://2026.ieeeicassp.org/) (Barcelona, Spain)."
+
+  - time: "Jun 2025"
+    text: "Passed the Ph.D. candidacy examination."
+
+  - time: "Oct 2024"
+    text: "My master's thesis was selected as an `Outstanding Master's Thesis` at [NWPU](https://en.nwpu.edu.cn/)."
+
+  - time: "Aug 2024"
+    text: "Started my Ph.D. studies in the Department of Electronic Engineering at [CUHK](https://www.cuhk.edu.hk)."

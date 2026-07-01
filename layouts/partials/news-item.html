@@ -1,0 +1,43 @@
+{{ $item := .item | default . }}
+{{ $showMedia := true }}
+{{ if isset . "showMedia" }}
+  {{ $showMedia = .showMedia }}
+{{ end }}
+{{ $date := partial "news-date.html" $item }}
+{{ $imageHrefs := slice }}
+{{ with $item.image }}
+  {{ $imageHrefs = $imageHrefs | append (partial "resource-href.html" (dict "value" . "base" "img/news/")) }}
+{{ end }}
+{{ with $item.images }}
+  {{ range . }}
+    {{ $imageHrefs = $imageHrefs | append (partial "resource-href.html" (dict "value" . "base" "img/news/")) }}
+  {{ end }}
+{{ end }}
+{{ $text := $item.text | default $item.title }}
+{{ $hasMedia := and $showMedia (gt (len $imageHrefs) 0) }}
+{{ $hasResourceLinks := or $item.code $item.arxiv $item.pdf $item.slides $item.file }}
+<li class="news-item{{ if $hasMedia }} news-item--has-media{{ end }}">
+  <time class="news-date" datetime="{{ $item.newsDateTime | default $date.datetime }}">{{ $item.newsDisplayTime | default $date.display }}</time>
+  <div class="news-content markdown-content">
+    {{ if and $item.title $item.text }}
+      <p><strong>{{ $item.title | markdownify }}</strong></p>
+    {{ end }}
+    {{ if or $text $hasResourceLinks }}
+      <p>
+        {{ with $text }}{{ . | markdownify }}{{ end }}
+        {{ with $item.code }}{{ partial "resource-link.html" (dict "value" . "label" "[code]" "class" "news-resource-link") }}{{ end }}
+        {{ with $item.arxiv }}{{ partial "resource-link.html" (dict "value" . "label" "[arxiv]" "class" "news-resource-link") }}{{ end }}
+        {{ with $item.pdf }}{{ partial "resource-link.html" (dict "value" . "base" "pdf/news/" "label" "[pdf]" "class" "news-resource-link") }}{{ end }}
+        {{ with $item.slides }}{{ partial "resource-link.html" (dict "value" . "base" "pdf/news/" "label" "[slides]" "class" "news-resource-link") }}{{ end }}
+        {{ with $item.file }}{{ partial "resource-link.html" (dict "value" . "base" "pdf/news/" "label" "[file]" "class" "news-resource-link") }}{{ end }}
+      </p>
+    {{ end }}
+  </div>
+  {{ if $hasMedia }}
+    <figure class="news-media">
+      {{ range $index, $imageHref := $imageHrefs }}
+        <img src="{{ $imageHref }}" alt="{{ $item.imageAlt | default $item.alt | default (printf "News image %d" (add $index 1)) }}">
+      {{ end }}
+    </figure>
+  {{ end }}
+</li>

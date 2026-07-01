@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <article class="home-page">
+    {{ partial "home/hero.html" . }}
+
+    {{ if .Content }}
+      <section class="home-section home-section--biography" aria-labelledby="home-biography-heading">
+        <h2 id="home-biography-heading">Biography</h2>
+        {{ partial "page-content.html" . }}
+      </section>
+    {{ end }}
+
+    {{ partial "home/news.html" . }}
+    {{ partial "home/publications.html" . }}
+  </article>
+{{ end }}

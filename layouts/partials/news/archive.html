@@ -1,0 +1,25 @@
+{{ $items := .items | default . }}
+{{ $currentYear := "" }}
+
+<div class="news-archive">
+  {{ range $items }}
+    {{ $year := .newsYear }}
+    {{ if ne $year $currentYear }}
+      {{ if ne $currentYear "" }}
+          </ul>
+        </section>
+      {{ end }}
+      <section class="year-group" aria-label="{{ $year }} news">
+        <h2 class="year-heading">{{ $year }}</h2>
+        <ul class="news-list">
+      {{ $currentYear = $year }}
+    {{ end }}
+
+    {{ partial "news-item.html" (dict "item" . "showMedia" true) }}
+  {{ end }}
+
+  {{ if ne $currentYear "" }}
+      </ul>
+    </section>
+  {{ end }}
+</div>

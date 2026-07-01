@@ -1,0 +1,113 @@
+{{ $page := .page }}
+{{ $profile := .profile }}
+{{ $siteName := .siteName }}
+{{ $pageTitle := .pageTitle }}
+{{ $description := .description }}
+{{ $author := .author }}
+{{ $imageURL := .imageURL }}
+{{ $affiliationName := .affiliationName }}
+{{ $personID := printf "%s#person" site.BaseURL }}
+{{ $websiteID := printf "%s#website" site.BaseURL }}
+{{ $webpageID := printf "%s#webpage" $page.Permalink }}
+
+{{ $sameAs := slice }}
+{{ range $profile.links }}
+  {{ with .url }}
+    {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
+      {{ $sameAs = $sameAs | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $person := dict
+  "@context" "https://schema.org"
+  "@id" $personID
+  "@type" "Person"
+  "name" $author
+  "url" site.BaseURL
+  "description" $description
+}}
+{{ with $profile.title }}
+  {{ $person = merge $person (dict "jobTitle" .) }}
+{{ end }}
+{{ with $affiliationName }}
+  {{ $person = merge $person (dict "affiliation" (dict "@type" "Organization" "name" .)) }}
+{{ end }}
+{{ with $imageURL }}
+  {{ $person = merge $person (dict "image" .) }}
+{{ end }}
+{{ if gt (len $sameAs) 0 }}
+  {{ $person = merge $person (dict "sameAs" $sameAs) }}
+{{ end }}
+
+{{ $website := dict
+  "@context" "https://schema.org"
+  "@id" $websiteID
+  "@type" "WebSite"
+  "url" site.BaseURL
+  "name" $siteName
+  "publisher" (dict "@id" $personID)
+}}
+
+{{ $webpage := dict
+  "@context" "https://schema.org"
+  "@id" $webpageID
+  "@type" "WebPage"
+  "url" $page.Permalink
+  "name" $pageTitle
+  "description" $description
+  "isPartOf" (dict "@id" $websiteID)
+  "about" (dict "@id" $personID)
+}}
+{{ with $imageURL }}
+  {{ $webpage = merge $webpage (dict "image" .) }}
+{{ end }}
+
+{{ $graph := slice $person $website $webpage }}
+
+{{ if eq $page.Section "publications" }}
+  {{ $listItems := slice }}
+  {{ range $index, $publication := hugo.Data.publications }}
+    {{ $publicationAuthors := slice }}
+    {{ range $publication.authors }}
+      {{ $publicationAuthors = $publicationAuthors | append (dict "@type" "Person" "name" .) }}
+    {{ end }}
+
+    {{ $publicationLinks := $publication.links | default (dict) }}
+    {{ $publicationEntity := dict
+      "@type" "ScholarlyArticle"
+      "name" ($publication.title | default "Untitled publication")
+      "author" $publicationAuthors
+    }}
+    {{ with $publication.year }}
+      {{ $publicationEntity = merge $publicationEntity (dict "datePublished" (printf "%v" .)) }}
+    {{ end }}
+    {{ with $publication.venue }}
+      {{ $publicationEntity = merge $publicationEntity (dict "isPartOf" (dict "@type" "CreativeWork" "name" .)) }}
+    {{ end }}
+    {{ with index $publicationLinks "doi" }}
+      {{ $publicationEntity = merge $publicationEntity (dict "sameAs" .) }}
+    {{ end }}
+    {{ with index $publicationLinks "pdf" }}
+      {{ $publicationEntity = merge $publicationEntity (dict "encoding" (dict "@type" "MediaObject" "contentUrl" (partial "resource-href.html" (dict "value" .) | absURL))) }}
+    {{ end }}
+
+    {{ $listItems = $listItems | append (dict
+      "@type" "ListItem"
+      "position" (add $index 1)
+      "item" $publicationEntity
+    ) }}
+  {{ end }}
+
+  {{ $publicationList := dict
+    "@context" "https://schema.org"
+    "@id" (printf "%s#publications" $page.Permalink)
+    "@type" "ItemList"
+    "name" $page.Title
+    "itemListElement" $listItems
+  }}
+  {{ $graph = $graph | append $publicationList }}
+{{ end }}
+
+{{ $structuredData := dict "@context" "https://schema.org" "@graph" $graph }}
+<script type="application/ld+json">{{ $structuredData | jsonify | safeJS }}</script>

@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <article class="section-page section-page--{{ .Section }}">
+    {{ partial "page-header.html" . }}
+
+    {{ partial "page-content.html" . }}
+
+    {{ if eq .Params.showChildren true }}
+      {{ partial "child-page-groups.html" . }}
+    {{ end }}
+  </article>
+{{ end }}

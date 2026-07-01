@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ $items := partial "news-items.html" . }}
+
+  <article class="section-page section-page--news">
+    {{ partial "page-header.html" . }}
+
+    {{ partial "page-content.html" . }}
+
+    {{ if gt (len $items) 0 }}
+      {{ partial "news/archive.html" (dict "items" $items) }}
+    {{ else }}
+      <p class="empty-state">No news items have been added yet.</p>
+    {{ end }}
+  </article>
+{{ end }}

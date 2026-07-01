@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en-us" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ partial "seo.html" . }}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+
+    {{ with resources.Get "css/main.css" }}
+      {{ $css := . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+    {{ end }}
+    {{ if .Param "math" }}
+      {{ partialCached "math.html" . }}
+    {{ end }}
+  </head>
+  {{ $hideNav := .Params.hideNav | default false }}
+  <body class="kind-{{ .Kind }} section-{{ .Section | default "home" }}{{ if $hideNav }} has-no-nav{{ end }}">
+    <a class="skip-link" href="#main">Skip to content</a>
+    {{ if not $hideNav }}
+      {{ partial "header.html" . }}
+    {{ end }}
+
+    <main id="main" class="site-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+    {{ with resources.Get "js/navigation.js" }}
+      {{ $js := . | minify | fingerprint }}
+      <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    {{ end }}
+  </body>
+</html>

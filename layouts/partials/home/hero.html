@@ -1,0 +1,46 @@
+{{ $profile := hugo.Data.profile }}
+{{ $displayName := $profile.displayName | default $profile.name | default site.Title }}
+{{ $profileLinks := where $profile.links "url" "ne" "" }}
+
+<header class="home-hero">
+  <div class="home-hero__content">
+    <h1>{{ $displayName }}</h1>
+
+    <div class="hero-profile" aria-label="Profile details">
+      {{ with $profile.title }}
+        <p class="hero-profile__title">{{ . }}</p>
+      {{ end }}
+
+      <div class="hero-profile__affiliation">
+        {{ with $profile.department }}<p>{{ . }}</p>{{ end }}
+        {{ with $profile.university }}<p>{{ . }}</p>{{ end }}
+      </div>
+
+      <div class="hero-profile__contact">
+        {{ with $profile.office }}<p>Office: {{ . }}</p>{{ end }}
+        {{ with $profile.emailDisplay }}
+          <p>Email: {{ . }}</p>
+        {{ end }}
+      </div>
+
+      {{ if gt (len $profileLinks) 0 }}
+        <div class="home-hero__links" aria-label="Profile links">
+          {{ range $profileLinks }}
+            <a href="{{ partial "resource-href.html" (dict "value" .url) }}">{{ .label }}</a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="home-hero__media">
+    {{ $profilePath := $profile.photo }}
+    {{ if and $profilePath (fileExists (printf "static/%s" $profilePath)) }}
+      <img src="{{ partial "resource-href.html" (dict "value" $profilePath) }}" alt="{{ $displayName }}">
+    {{ else }}
+      <div class="profile-placeholder" aria-hidden="true">
+        {{ range first 2 (split $displayName " ") }}{{ substr . 0 1 }}{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</header>

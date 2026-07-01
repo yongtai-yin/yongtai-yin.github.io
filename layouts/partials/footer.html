@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    {{ $profile := hugo.Data.profile }}
+    {{ $owner := $profile.name | default site.Title }}
+    {{ $lastUpdateFormat := site.Params.lastUpdateFormat | default site.Params.dateFormat | default "Jan 2006" }}
+    <p class="site-footer__updated">Last Update: {{ now.Format $lastUpdateFormat }}.</p>
+    <p class="site-footer__copyright">&copy; {{ now.Year }} {{ $owner }}.</p>
+    <p class="site-footer__meta">Built with Hugo.</p>
+  </div>
+</footer>

@@ -1,0 +1,27 @@
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+    <button class="nav-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>
+      <span class="nav-toggle__icon" aria-hidden="true">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </span>
+    </button>
+
+    <nav id="main-navigation" class="site-nav" aria-label="Main navigation" data-nav-menu>
+      <ul class="site-nav__list">
+        {{ range site.Menus.main }}
+          {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+          {{ if and $.IsHome (eq .Identifier "home") }}
+            {{ $active = true }}
+          {{ end }}
+          <li class="site-nav__item">
+            <a class="site-nav__link{{ if $active }} is-active{{ end }}" href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

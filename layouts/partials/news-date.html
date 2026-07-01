@@ -1,0 +1,63 @@
+{{- $raw := printf "%v" (or .time .date "") | strings.TrimSpace -}}
+{{- $display := $raw -}}
+{{- $year := "0000" -}}
+{{- $month := "01" -}}
+{{- $day := "01" -}}
+{{- $monthMap := dict
+  "jan" "01" "january" "01"
+  "feb" "02" "february" "02"
+  "mar" "03" "march" "03"
+  "apr" "04" "april" "04"
+  "may" "05"
+  "jun" "06" "june" "06"
+  "jul" "07" "july" "07"
+  "aug" "08" "august" "08"
+  "sep" "09" "sept" "09" "september" "09"
+  "oct" "10" "october" "10"
+  "nov" "11" "november" "11"
+  "dec" "12" "december" "12"
+-}}
+{{- $monthLabels := dict
+  "01" "Jan"
+  "02" "Feb"
+  "03" "Mar"
+  "04" "Apr"
+  "05" "May"
+  "06" "Jun"
+  "07" "Jul"
+  "08" "Aug"
+  "09" "Sep"
+  "10" "Oct"
+  "11" "Nov"
+  "12" "Dec"
+-}}
+
+{{- if ge (len $raw) 7 -}}
+  {{- if gt (len (findRE "^\\d{4}-\\d{2}" $raw)) 0 -}}
+    {{- $year = substr $raw 0 4 -}}
+    {{- $month = substr $raw 5 2 -}}
+    {{- if ge (len $raw) 10 -}}
+      {{- $day = substr $raw 8 2 -}}
+    {{- end -}}
+    {{- $display = printf "%s %s" (index $monthLabels $month) $year -}}
+  {{- else -}}
+    {{- $yearMatches := findRE "\\d{4}" $raw -}}
+    {{- if gt (len $yearMatches) 0 -}}
+      {{- $year = index $yearMatches 0 -}}
+    {{- end -}}
+    {{- $monthName := lower (replaceRE "[^A-Za-z].*$" "" $raw) -}}
+    {{- with index $monthMap $monthName -}}
+      {{- $month = . -}}
+      {{- if ne $year "0000" -}}
+        {{- $display = printf "%s %s" (index $monthLabels $month) $year -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (dict
+  "display" $display
+  "year" $year
+  "datetime" (printf "%s-%s-%s" $year $month $day)
+  "sortTime" (printf "%s-%s-%sT00:00:00" $year $month $day)
+) -}}

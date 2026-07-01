@@ -1,0 +1,19 @@
+{{- $profile := hugo.Data.profile -}}
+{{- $name := $profile.name | default site.Title | default "Academic Homepage" -}}
+{{- $themeColor := site.Params.themeColor | default "#16645a" -}}
+{{- $backgroundColor := site.Params.backgroundColor | default "#fbfbfa" -}}
+{
+  "name": {{ $name | jsonify }},
+  "short_name": {{ $name | jsonify }},
+  "icons": [
+    {
+      "src": {{ "favicon.svg" | relURL | jsonify }},
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": {{ $themeColor | jsonify }},
+  "background_color": {{ $backgroundColor | jsonify }},
+  "display": "minimal-ui"
+}

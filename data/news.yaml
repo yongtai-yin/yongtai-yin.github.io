@@ -19,9 +19,7 @@ items:
 
   - time: "May 2026"
     text: "Barcelona!"
-    images:
-      - "2026-ICASSP.jpg"
-      - "2026-Barcelona.jpg"
+    image: "2026-Barcelona.jpg"
 
   - time: "Jan 2026"
     text: "One paper accepted to [ICASSP 2026](https://2026.ieeeicassp.org/) (Barcelona, Spain)."

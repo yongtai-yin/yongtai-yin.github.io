@@ -22,6 +22,6 @@ title: "Misc"
 
 ## Honors & Awards
 
-- **Postgraduate Studentship**, [CUHK](https://www.cuhk.edu.hk/), 2024
+- **Postgraduate Studentship**, [CUHK](https://www.cuhk.edu.hk/), 2024 - Present
 - **Outstanding Master’s Thesis**, [NWPU](https://en.nwpu.edu.cn/), 2024
 - **Outstanding Graduates** (Postgraduates & Undergraduates), [NWPU](https://en.nwpu.edu.cn/), 2024 & 2021

@@ -12,7 +12,7 @@ Most updates happen in these files:
 | Task | Edit here |
 | --- | --- |
 | Name, title, email, office, portrait, CV link, Scholar link | `data/profile.yaml` |
-| Homepage biography | `content/_index.md` |
+| Homepage content and homepage section switches | `content/_index.md` |
 | News | `data/news.yaml` |
 | Publications | `bib/refs.bib` |
 | Research, Teaching, Group, and other pages | `content/` |
@@ -212,9 +212,44 @@ links:
 
 If the file is `static/img/profile.jpg`, write the path as `img/profile.jpg`.
 
+## Homepage Content
+
+The homepage always starts with the profile hero, which reads from
+`data/profile.yaml`. Everything below the hero is controlled by
+`content/_index.md`.
+
+Use normal Markdown headings and paragraphs in `content/_index.md`:
+
+```markdown
+---
+title: "Home"
+showNews: true
+showPublications: true
+---
+
+## Biography
+
+Short biography text.
+
+## Research Interests
+
+- Signal processing
+- Optimization
+```
+
+Homepage-only fields:
+
+- `showNews`: set to `false` to hide the Recent News block from the homepage.
+- `showPublications`: set to `false` to hide the Selected Publications block
+  from the homepage.
+
+If these fields are omitted, both blocks are shown by default.
+
 ## News
 
-News items live in `data/news.yaml`.
+News items live in `data/news.yaml`. The News page always reads this file; the
+homepage Recent News block is shown only when `showNews` in `content/_index.md`
+is not `false`.
 
 ```yaml
 items:
@@ -263,8 +298,9 @@ doi={10.0000/example},
 award={Best Paper Award}
 ```
 
-`selected={true}` shows a paper on the homepage. Local file paths should not
-include the deployed website subpath.
+`selected={true}` shows a paper in the homepage Selected Publications block
+when `showPublications` is not `false`. Local file paths should not include the
+deployed website subpath.
 
 ## Pages
 
@@ -272,7 +308,7 @@ Markdown pages live under `content/`.
 
 Common files:
 
-- `content/_index.md`: homepage biography.
+- `content/_index.md`: homepage content and homepage section switches.
 - `content/research/_index.md`: Research page.
 - `content/publications/_index.md`: Publications intro text.
 - `content/teaching/_index.md`: Teaching page.
@@ -300,6 +336,8 @@ Common fields:
 - `title`: page title shown at the top.
 - `description`: short text shown under the title. It supports Markdown links.
 - `showChildren`: set to `true` on section pages to list child pages.
+- `showNews`: set to `false` on the homepage to hide Recent News.
+- `showPublications`: set to `false` on the homepage to hide Selected Publications.
 - `class`: group label used when a parent page lists child pages.
 - `aliases`: old URLs that should redirect to this page.
 - `hideNav`: hide the top navigation for special pages.

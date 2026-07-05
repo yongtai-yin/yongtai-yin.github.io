@@ -266,14 +266,15 @@ a:hover {
 
 /* Home Sections */
 .home-section {
-  margin-top: 2.5rem;
+  margin-top: 1.6rem;
 }
 
 .home-section h2 {
   margin: 0;
   font-family: var(--font-serif);
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.25;
+  font-weight: 700;
 }
 
 .home-section__header {
@@ -281,7 +282,7 @@ a:hover {
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .home-section__header a {

@@ -3,13 +3,15 @@
     {{ partial "home/hero.html" . }}
 
     {{ if .Content }}
-      <section class="home-section home-section--biography" aria-labelledby="home-biography-heading">
-        <h2 id="home-biography-heading">Biography</h2>
-        {{ partial "page-content.html" . }}
-      </section>
+      {{ partial "page-content.html" . }}
     {{ end }}
 
-    {{ partial "home/news.html" . }}
-    {{ partial "home/publications.html" . }}
+    {{ if ne .Params.showNews false }}
+      {{ partial "home/news.html" . }}
+    {{ end }}
+
+    {{ if ne .Params.showPublications false }}
+      {{ partial "home/publications.html" . }}
+    {{ end }}
   </article>
 {{ end }}

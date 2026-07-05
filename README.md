@@ -15,7 +15,7 @@ can be used as a reference when adapting the site for a different person.
 - `hugo.yaml`: site configuration, including `baseURL`, top navigation, and SEO defaults.
 - `content/`: Markdown pages and section pages.
 - `data/profile.yaml`: profile, contact details, portrait, and homepage links.
-- `data/news.yaml`: news items rendered on the homepage and News page.
+- `data/news.yaml`: news items rendered on the News page and optionally on the homepage.
 - `bib/refs.bib`: source of truth for publication entries.
 - `data/publications.json`: generated publication data for Hugo.
 - `static/img/`: images copied directly into the built site.
@@ -34,7 +34,8 @@ profile data, news, publications, pages, images, or PDFs.
 
 The template intentionally keeps only a few page layouts:
 
-- Home page: `layouts/index.html`.
+- Home page: `layouts/index.html`; page content and homepage section switches
+  live in `content/_index.md`.
 - Ordinary top-level pages, such as Research, Teaching, and Group:
   `layouts/_default/list.html`.
 - Ordinary child pages, such as project, software, and course pages:
@@ -131,6 +132,26 @@ all pages align consistently.
 ```yaml
 description: "A short note with a [link](/research/)."
 ```
+
+## Homepage Content
+
+The homepage always renders the profile hero from `data/profile.yaml`. The
+editable homepage body comes from `content/_index.md`, so it can contain normal
+Markdown sections such as Biography, About Me, Research Interests, or Service.
+
+Use `showNews` and `showPublications` in `content/_index.md` to control whether
+the homepage shows the Recent News and Selected Publications blocks:
+
+```yaml
+---
+title: "Home"
+showNews: true
+showPublications: true
+---
+```
+
+Both values default to `true` when omitted. Set either value to `false` to hide
+that block from the homepage.
 
 ## Local Preview
 

@@ -5,9 +5,9 @@ title: "Misc"
 
 ## Teaching
 
-- Student Helper, [ENGG5781 Matrix Analysis and Computations](https://www.ee.cuhk.edu.hk/~wkma/engg5781/), Fall 2025
-- Teaching Assistant, ENGG2030 Signals and Systems, Spring 2025
-- Teaching Assistant, ELEG2310B Principles of Communication Systems, Fall 2024
+- Fall 2025: Student Helper, [ENGG5781 Matrix Analysis and Computations](https://www.ee.cuhk.edu.hk/~wkma/engg5781/)
+- Spring 2025: Teaching Assistant, ENGG2030 Signals and Systems
+- Fall 2024: Teaching Assistant, ELEG2310B Principles of Communication Systems
 
 ## Academic Services
 

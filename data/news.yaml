@@ -8,6 +8,7 @@
 items:
   - time: "Jul 2026"
     text: "Attended [SAM 2026](https://attend.ieee.org/sam-2026/) in Shenzhen, China."
+    image: "2026-SAM.jpg"
 
   - time: "Jun 2026"
     text: "Passed the Ph.D. proposal defence."

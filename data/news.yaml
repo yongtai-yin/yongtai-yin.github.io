@@ -7,6 +7,9 @@
 # - arxiv/code: external links
 items:
   - time: "Jul 2026"
+    text: "Attended [SAM 2026](https://attend.ieee.org/sam-2026/) in Shenzhen, China."
+
+  - time: "Jul 2026"
     text: "This academic homepage is being rebuilt with [Hugo](https://gohugo.io/)."
     images: []
     pdf: ""
